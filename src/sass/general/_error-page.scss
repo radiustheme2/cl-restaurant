@@ -1,0 +1,48 @@
+/*=======================================================================
+= 404 Error page
+=========================================================================*/
+/* 404 Error */
+.error-wrap-layout {
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+    background-color: #F6F6F6;
+    z-index: 1;
+    .item-logo {
+        margin-bottom: 30px;
+    }
+    h1.main-title {
+        font-size: 2.25rem;
+        line-height: 1.2;
+    }
+    .btn-wrap {
+        margin-top: 15px;
+    }
+    &:before,
+    &:after {
+        left: 0;
+        bottom: 0;
+        content: '';
+        position: absolute;
+        background-image: url(../img/theme/error1.svg);
+        z-index: -1;
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+    }
+    &:after {
+        top: 0;
+        right: 0;
+        background-image: url(../img/theme/error2.svg);
+        background-position: top right;
+    }
+}
+.admin-bar {
+    .error-wrap-layout {
+        min-height: calc(100vh - 32px);
+    }
+}

@@ -1,0 +1,97 @@
+/*=======================================================================
+= Footer Style
+=========================================================================*/
+.footer {
+    background-color: $bgFooterColor;
+    .footer-widget-area {
+        padding-top: 90px;
+        padding-bottom: 60px;
+        border-bottom: 1px solid #383838;
+        @include respond-below(xs){
+            padding-top: 70px;
+            padding-bottom: 30px;
+        }
+    }
+    .widget-title {
+        color: $colorWhite;
+        padding-bottom: 10px;
+        border: none;
+        @include respond-below(xs){
+            padding-bottom: 0;
+        }
+    }
+    .menu {
+        a {
+            padding: 5px 0;
+            display: inline-block;
+        }
+    }
+    &.footer-1 {
+        color: #a19f9f;
+        a {
+            color: #a19f9f;
+            &:hover {
+                color: $colorPrimary;
+            }
+        }
+        table th, table td, .wp-block-table th, .wp-block-table td {
+            border: 1px solid #a19f9f;
+        }
+        .dark-apps {
+            display: none;
+        }
+    }
+    &.footer-2 {
+        background-color: $colorWhite;
+        color: $colorBody;
+        a {
+            color: $colorBody;
+            &:hover {
+                color: $colorPrimary;
+            }
+        }
+        .widget-title {
+            color: $colorHeading;
+        }
+        .light-apps {
+            display: none;
+        }
+        .dark-apps {
+            display: block;
+        }
+        .footer-widget-area {
+            border-color: $colorLine;
+        }
+    }
+    .download-widget {
+        a {
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+    }
+}
+
+/* = CopyRight Area = */
+.copyright-area {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+}
+.scroll-top-top {
+    order: 1;
+    a {
+        color: #a19f9f;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        border: 1px solid #a19f9f;;
+        i {
+            display: inline-block;
+            transform: rotate(90deg);
+        }
+    }
+}

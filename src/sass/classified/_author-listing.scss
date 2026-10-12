@@ -1,0 +1,112 @@
+/*=======================================================================
+= Listing my account page
+=========================================================================*/
+.author-listing-page {
+	.listing-sidenar-widgets {
+		padding-top: 120px;
+		padding-bottom: 120px;
+		@include respond-below(md){
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+	}
+	.rtcl-user-info-wrap {
+		align-items: center;
+		border-radius: 8px;
+		.rtcl-user-img {
+			img {
+				border-radius: 8px;
+			}
+		}
+		h3.user-name {
+			margin-bottom: 5px;
+		}
+		.rtcl-user-meta {
+			color: $colorBody;
+			i {
+				color: $colorPrimary;
+			}
+			a {
+				color: $colorBody;
+				&:hover {
+					color: $colorPrimary;
+				}
+			}
+		}
+		.rtcl-user-social {
+			gap: 5px;
+			display: flex;
+			margin-top: 15px;
+			a {
+				i {
+					width: 25px;
+					height: 25px;
+					display: flex;
+					border-radius: 3px;
+					color: $colorWhite;
+					align-items: center;
+					justify-content: center;
+					transition: $transition;
+					background-color: $colorPrimary;
+					&.rtcl-icon-facebook {
+						background-color: $facebook;
+					}
+					&.rtcl-icon-twitter {
+						background-color: $twitter;
+					}
+					&.rtcl-icon-youtube {
+						background-color: $youtube;
+					}
+					&.rtcl-icon-instagram {
+						background-color: $instagram;
+					}
+					&.rtcl-icon-linkedin {
+						background-color: $linkedin;
+					}
+					&.rtcl-icon-pinterest {
+						background-color: $pinterest;
+					}
+					&.rtcl-icon-reddit {
+						background-color: $reddit;
+					}
+					&.rtcl-icon-tiktok {
+						background-color: $tiktok;
+					}
+				}
+				&:hover {
+					i {
+						background-color: $colorHPrimary;
+					}
+				}
+			}
+		}
+	}
+}
+
+ul.author-social {
+	gap: 10px;
+	margin: 15px 0 0 0;
+	padding: 0;
+	list-style: none;
+	display: inline-flex;
+	li {
+		a {
+			display: inline-flex;
+		}
+	}
+}
+
+.rtcl-sv-sign {
+	color: #0ACD1E;
+	.verified-text {
+		padding: 4px;
+		border-radius: 4px;
+		background-color: #0ACD1E;
+		&:after {
+			border-top-color: #0ACD1E;
+		}
+	}
+	i {
+		font-size: 18px;
+	}
+}

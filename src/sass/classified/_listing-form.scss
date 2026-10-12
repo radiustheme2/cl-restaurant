@@ -1,0 +1,170 @@
+/*=======================================================================
+= Listing Form
+=========================================================================*/
+.rtcl-pricing-price,
+.price-discpunt {
+	margin-bottom: 30px;
+}
+
+#rtcl-gallery-upload-ui-wrapper .rtcl-gallery p a {
+    color: #fff;
+}
+
+#rtcl-gallery-upload-ui-wrapper .rtcl-gallery p a {
+    color: #fff;
+}
+
+.rn-recipe-wrapper {
+	.rn-recipe-wrap {
+		.rn-recipe-item {
+			padding: 25px;
+			position: relative;
+			margin-bottom: 15px;
+			border: 1px solid #ced4da;
+			.rn-ingredient-item {
+				padding: 15px;
+				position: relative;
+				margin-bottom: 15px;
+				border: 1px solid #eceef0;
+				.rn-ingredient-fields {
+					input.form-control {
+						width: 48%;
+						float: left;
+						display: flex;
+						gap: 10px;
+						margin: 1%;
+						margin-bottom: 17px!important;
+					}
+					textarea.form-control {
+						margin: 1%;
+						width: 98%;
+					}
+				}
+				.food-image-wrap {
+					margin: 1%;
+					margin-top: 20px;
+					.food-image {
+						img {
+							width: 80px;
+							border-radius: 6px;
+						}
+					}
+				}
+			}
+			textarea,
+			input {
+				margin-bottom: 10px;
+			}
+			textarea {
+				height: 100px;
+			}
+			span.rn-remove {
+				top: -1px;
+				right: -1px;
+				width: 20px;
+				height: 20px;
+				color: #fff;
+				cursor: pointer;
+				position: absolute;
+				align-items: center;
+				display: inline-flex;
+				justify-content: center;
+				background-color: red;
+			}
+		}
+	}
+}
+
+.rtcl {
+	.form-control {
+		height: 45px;
+		border-color: #ededed;
+		background-color: #f9f9f9;
+		&:focus {
+			outline: none;
+			box-shadow: none;
+		}
+	}
+	.rn-ingredient-actions,
+	.rn-recipe-actions {
+		a {
+			padding: 12px 25px;
+			color: $colorWhite;
+			background-color: $colorPrimary;
+			&:hover {
+				background-color: $colorHPrimary;
+			}
+		}
+	}
+}
+
+.rtcl-post-contact-details {
+	.form-group {
+		margin-bottom: 15px;
+		textarea.form-control {
+			height: 160px;
+		}
+	}
+}
+
+.rtcl-login-form-wrap {
+	#rtcl-login-form {
+		.form-group {
+			margin-bottom: 15px;
+		}
+	}
+}
+.rtcl-account #rtcl-user-login-wrapper .rtcl-login-form-wrap .btn {
+	color: $colorWhite;
+	background-color: $colorPrimary;
+}
+.rtcl-account #rtcl-user-login-wrapper .rtcl-login-form-wrap .rtcl-forgot-password a {
+	color: $colorBody;
+}
+.rtcl-account #rtcl-user-login-wrapper .rtcl-login-form-wrap .rtcl-forgot-password a:hover {
+	color: $colorPrimary;
+}
+.rtcl .btn-primary.focus, .rtcl .btn-primary:focus, .rtcl .btn-primary:hover {
+    background-color: $colorHPrimary;
+    border-color: $colorHPrimary;
+    color: #fff;
+}
+.rtcl .btn-primary.focus, .rtcl .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba($colorHPrimary, 0.5);
+}
+.rtcl-post-category {
+	position: relative;
+	.rtcl-icon-spinner {
+		display: none;
+		&.animate-spin {
+			display: none;
+		}
+	}
+}
+.select2-container--open .select2-dropdown {
+    left: 0;
+    top: 30px;
+}
+.rtcl-post-form-wrap {
+	.rtcl-listing-pricing-type {
+		input {
+			width: 20px;
+			height: 20px;
+			accent-color: $colorPrimary;
+		}
+	}
+
+	.form-check-input:checked {
+		background-color: $colorPrimary;
+		border-color: $colorPrimary;
+	}
+	.form-check-input {
+		width: 20px;
+		height: 20px;
+		margin-right: 8px;
+	}
+	.form-check-input:focus {
+		border-color: $colorPrimary;
+		box-shadow: 0 0 0 0.25rem rgba( $colorPrimary, 0.25 );
+	}
+}

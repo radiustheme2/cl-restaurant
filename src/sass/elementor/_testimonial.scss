@@ -1,0 +1,152 @@
+/*=======================================================================
+= Testimonial Block
+=========================================================================*/
+
+.rt-el-testimonial {
+    .testimonial-block {
+        margin: 70px 5px;
+        padding: 40px 30px;
+        position: relative;
+        border-radius: 16px;
+        transition: all 0.4s ease;
+        background-color: $colorWhite;
+        box-shadow: 0px 0px 80px rgba(181, 3, 11, 0.1);
+        @include respond-below(mmd){
+            margin: 0;
+        }
+        .qoute-icon {
+            top: 30px;
+            right: 30px;
+            line-height: 1;
+            position: absolute;
+            i {
+                font-size: 40px;
+                color: $colorLine;
+            }
+        }
+        .rating {
+            gap: 5px;
+            display: flex;
+            list-style: none;
+            align-items: center;
+            margin-bottom: 20px; 
+            li {
+                i {
+                    font-size: 18px;
+                    color: #e1e1e1;
+                    &.active {
+                        color: #f2c94c;
+                    }
+                }
+            }
+        }
+        &__text {
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+        .testimonial-content {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .testimonial-img {
+            width: 60px;
+            height: 60px;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+        &__heading {
+            margin-bottom: 0;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        &__designation {
+            font-size: 14px;
+            color: #929292;
+        }
+    }
+    .el-swiper-pagination {
+        margin-top: 40px;
+        text-align: center;
+        .swiper-pagination-bullet {
+            height: 13px;
+            width: 13px;
+            border: 1px solid;
+            border-color: #4f4f4f;
+            background-color: transparent;
+            transition: all 0.4s ease;
+            &.swiper-pagination-bullet-active {
+                background-color: $colorPrimary;
+                border-color: $colorPrimary;
+            }
+        } 
+    }
+
+    .rt-global-slider {
+        overflow: hidden;
+    }
+    .sliderNav {
+        width: 110px;
+        left: -330px;
+        bottom: 90px;
+        position: absolute;
+        @include respond-below(md){
+            left: 50%;
+            bottom: -45px;
+            margin-left: -60px;
+        }
+        &__btn {
+            width: 40px;
+            height: 40px;
+            z-index: 1;
+            border-radius: 100%;
+            background-color: $colorWhite;
+            &:after {
+                font-size: 18px;
+                font-weight: 600;
+                color: $colorPrimary;
+            }
+        }
+    }
+}
+
+.swiper-pagination {
+    z-index: 1;
+}
+
+.testimonial-2 {
+    .rt-el-testimonial {
+        .testimonial-block {
+            margin: 12px 0;
+            box-shadow: none;
+            border-radius: 16px;
+            border: 1px solid $colorLine;
+        }
+    }
+}
+
+
+
+// .rt-el-testimonial-carousel .testimonial-block 
+// .rt-el-testimonial-carousel .testimonial-block .qoute-icon  
+// .rt-el-testimonial-carousel .testimonial-block 
+
+// .rt-el-testimonial-carousel .testimonial-block .rating 
+// .rt-el-testimonial-carousel .testimonial-block .rating li 
+// .rt-el-testimonial-carousel .testimonial-block 
+
+
+
+// .rt-el-testimonial-carousel .testimonial-block 
+
+// .rt-el-testimonial-carousel .testimonial-block  
+// .rt-el-testimonial-carousel .testimonial-block 
+// .rt-el-testimonial-carousel .testimonial-block 
+// .rt-el-testimonial-carousel .testimonial-block  .testimonial-img 
+// .rt-el-testimonial-carousel 
+// .rt-el-testimonial-carousel .el-swiper-pagination 
+// .rt-el-testimonial-carousel .el-swiper-pagination .swiper-pagination-bullet

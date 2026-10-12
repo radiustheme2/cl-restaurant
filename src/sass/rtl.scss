@@ -1,0 +1,96 @@
+.rtl {
+	.newsletter-form-1 .fluentform .ff-el-group .ff-btn-submit img,
+	.prev.page-numbers,
+	.next.page-numbers {
+		transform: rotate(180deg);
+	}
+	.rtrs-review-wrap .rtrs-review-box .rtrs-each-review {
+		gap: 15px;
+	}
+
+	.swiper-rtl .swiper-button-next {
+		left: 0;
+		right: auto;
+	}
+	.swiper-rtl .swiper-button-prev {
+		right: 0;
+		left: auto;
+	}
+
+	button.button-style-2 i, a.button-style-2 i {
+		transform: rotate(180deg);
+	}
+
+	button.button-style-2:hover i, a.button-style-2:hover i {
+		transform: rotate(180deg) translate(5px, 0);
+	}
+	.rtcl-ajax-filter-item .rtcl-filter-checkbox-item label {
+		gap: 5px;
+	}
+	.rtcl .star-rating span {
+		text-align: left;
+	}
+
+	.rtrs-summary .rtrs-progress-wrap progress[value] {
+		height: auto;
+	}
+	.rtrs-summary .rtrs-progress-wrap .rtrs-progress {
+		column-gap: 5px;
+	}
+	.rtcl-style-6-view .meta-tags {
+		right: auto;
+	}
+	.rtcl.rtcl-elementor-widget .rtcl-list-view .listing-item .listing-thumb {
+		margin-right: 0;
+	}
+	.clequipment-listing-actions-buttons .listing-type-badge {
+		clip-path: polygon(0% 0%, 10% 50%, 0% 100%, 100% 100%, 100% 50%, 100% 0%);
+	}
+	.clequipment-listing-actions-buttons .rtcl-listing-badge-wrap span.badge {
+		//clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+		clip-path: polygon(0% 0%, 10% 50%, 0% 100%, 100% 100%, 100% 50%, 100% 0%);
+	}
+	.newsletter-form-1 .ff-btn-submit {
+		right: auto;
+		left: 7px;
+	}
+	.rtcl-el-slider-wrapper .rtcl-icon-angle-right:before,
+	.rtcl-el-slider-wrapper .rtcl-icon-angle-left:before {
+		transform: rotate(180deg);
+	}
+	.swiper-rtl .swiper-button-next {
+		left: -60px;
+	}
+	.swiper-rtl .swiper-button-prev {
+		right: -60px;
+	}
+	.rtcl .rtcl-listings .listing-item .listing-thumb .rtcl-price-wrap {
+		left: auto;
+	}
+
+	.rtcl-single-faqs-wrapper .rtcl-food-menu-repeater .food-menu-item .menu-price {
+		position: static;
+		margin-top: 5px;
+	}
+
+	.rtcl-ajax-filter-wrap .rtcl-ajax-filter-text:before,
+	.clequipment-search-form .search-box button,
+	.rt-contact-box .item-icon-box::after,
+	.clequipment-offcanvas-drawer .caret {
+		right: auto;
+	}
+	.rtcl-ajax-pagination-wrap ul li .prev.page-numbers,
+	.rtcl-ajax-pagination-wrap ul li .next.page-numbers,
+	.rtcl nav.rtcl-pagination ul li .prev.page-numbers,
+	.rtcl nav.rtcl-pagination ul li .next.page-numbers {
+		padding: 0;
+	}
+
+	&.clequipment-single-default .wp-block-quote:before,
+	&.clequipment-single-4 .wp-block-quote:before,
+	&.clequipment-single-3 .wp-block-quote:before,
+	&.clequipment-single-2 .wp-block-quote:before,
+	&.clequipment-single-1 .wp-block-quote:before {
+		right: auto;
+	}
+}

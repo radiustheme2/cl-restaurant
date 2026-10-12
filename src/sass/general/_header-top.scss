@@ -1,0 +1,301 @@
+/*=======================================================================
+= Header Top
+=========================================================================*/
+.topbar {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: black;
+    &.topbar-2 {
+        border: none;
+        padding-bottom: 10px;
+        background-image: url(../../img/theme/topbar-bg.png);
+        background-size: cover;
+        background-position: bottom;
+    }
+}
+.header-top {
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+    // @include respond-below(xs) {
+    //     flex-flow: column;
+    // }
+}
+.topbar-contact {
+    ul {
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        // @include respond-below(sm) {
+        //     gap: 0;
+        //     flex-flow: column;
+        // }
+        li {
+            gap: 10px;
+            margin: 0;
+            color: #ccc;
+            padding-left: 0;
+            list-style: none;
+            align-items: center;
+            display: inline-flex;
+            i.clr-icon-rt18-phone {
+                @include respond-below(sm) {
+                    font-size: 20px;
+                }
+            }
+            i.clr-icon-email-icon {
+                font-size: 12px;
+                @include respond-below(sm) {
+                    font-size: 16px;
+                }
+            }
+            a {
+                gap: 10px;
+                color: #ccc;
+                font-weight: 400;
+                font-size: 15px;
+                display: flex;
+                align-items: center;
+                // @include respond-below(mmd) {
+                //     font-size: 14px;
+                // }
+                &:after {
+                    content: "";
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background-color: #7E7E7E;
+                    display: inline-flex;
+                    // @include respond-below(sm) {
+                    //     display: none;
+                    // }
+                }
+                &:hover {
+                    color: $colorPrimary;
+                }
+                @include respond-below(sm) {
+                    .label-text {
+                        display: none;
+                    }
+                }
+            }
+            &:last-child {
+                a {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+            @media only screen and (max-width: 480px) {
+                justify-content: center;
+            }
+        }
+        @include respond-below(mmd) {
+            justify-content: center;
+        }
+        @media only screen and (max-width: 480px) {
+            // width: 100%;
+            // display: inline-block;
+        }
+    }
+}
+.topbar-2 {
+    .topbar-contact ul {
+        li {
+            color: $colorParagraph;
+            a {
+                color: $colorParagraph;
+                &:hover {
+                    color: $colorPrimary;
+                }
+            }
+        }
+    }
+    .social-btn {
+        .topbar-follows__header {
+            span {
+                color: $colorParagraph;
+            }
+            @include respond-below(sm) {
+                display: none;
+            }
+        }
+        ul li {
+            a {
+                @include respond-below(sm) {
+                    font-size: 18px;
+                }
+                color: $colorParagraph;
+                &:hover {
+                    color: $colorPrimary;
+                }
+                &.facebook {
+                    &:hover {
+                        color: $facebook;
+                    }
+                }
+                &.twitter {
+                    &:hover {
+                        color: $twitter;
+                    }
+                }
+                &.instagram {
+                    &:hover {
+                        color: $instagram;
+                    }
+                }
+                &.pinterest {
+                    &:hover {
+                        color: $pinterest;
+                    }
+                }
+            }
+        }
+    }
+}
+@include respond-below(md) {
+    .htop-social-disable {
+        .topbar-follows {
+            display: none;
+        }
+    }
+}
+@include respond-below(sm) {
+    .htop-phone-disable.htop-email-disable.htop-social-disable {
+        .topbar {
+            display: none;
+        }
+        .hero--layout1.hero--layout2 .hero__wrapper {
+            padding-top: 200px;
+        }
+    }
+    .htop-phone-disable {
+        .htop-phone {
+            display: none;
+        } 
+    } 
+    .htop-email-disable {
+        .htop-email {
+            display: none;
+        }
+    }
+}
+
+.trheader {
+    .topbar {
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        position: absolute;
+        background-color: transparent;
+        border-bottom: 1px solid rgba($colorWhite, $alpha: .1);
+        &.topbar-2 {
+            border: none;
+            @media screen and (max-width: 1024px) {
+                background-color: $colorWhite;
+                border-bottom: 1px solid #d7d7d7;
+            }
+            // Over the hero the dark paragraph colour is unreadable; use soft
+            // white until the bar turns white again (≤1024px).
+            @media screen and (min-width: 1025px) {
+                .topbar-contact ul li,
+                .topbar-contact ul li a,
+                .social-btn .topbar-follows__header span,
+                .social-btn ul li a:not(:hover) {
+                    color: rgba($colorWhite, .85);
+                }
+                .topbar-contact ul li a:after {
+                    background-color: rgba($colorWhite, .6);
+                }
+                .topbar-contact ul li a:hover {
+                    color: $colorPrimary;
+                }
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            top: 0 !important;
+            position: relative;
+            background-color: $colorBlack;
+        }
+    }
+    &.admin-bar {
+        .topbar {
+            top: 32px;
+        }
+    }
+    .rt-mobile-menu {
+        .site-branding {
+            a.logo-one {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .site-menu-btns {
+        display: flex;
+        align-items: center;
+        .nav-action-elements {
+            ul {
+                margin: 0;
+                li {
+                    a {
+                        overflow: hidden;
+                        border-radius: 100%;
+                        border: 1px solid $colorLine;
+                        i {
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: $transition; 
+                            color: $colorHeading !important;
+                        }
+                        &:hover {
+                            i {
+                                color: $colorWhite !important;
+                            }
+                        }
+                    }
+                    .login-btn {
+                        position: relative;
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            right: 100%;
+                            width: 0%;
+                            height: 100%;
+                            background-color: $colorHPrimary;
+                            border-radius: 40px;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all 0.8s ease;
+                            z-index: -1;
+                        }
+                        &:hover {
+                            &:before {
+                                right: 0;
+                                width: 100%;
+                                opacity: 1;
+                                visibility: visible;
+                                transition: width 0.8s ease;
+                            }
+                        }
+                    }
+                    .listing-btn {
+                        background-color: transparent !important;
+                        .listing-btn__icon {
+                            background-color: transparent !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

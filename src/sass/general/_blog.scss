@@ -1,0 +1,162 @@
+/*=======================================================================
+= Blog
+=========================================================================*/
+.blog-post {
+    opacity: 1;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    background-color: $colorWhite;
+    @media screen and (max-width: 480px) {
+        padding: 15px;
+    }
+    &__figure {
+        display: flex;
+        position: relative;
+        a {
+            overflow: hidden;
+            display: inline-block;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            img {
+                width: 100%;
+                transform: scale(1.01);
+                transition: $transition;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+        }
+        .date-meta {
+            gap: 5px;
+            right: 0;
+            bottom: -13px;
+            color: #fff;
+            display: flex;
+            position: absolute;
+            padding: 5px 20px;
+            font-weight: 500;
+            font-family: $fontHeading;
+            background-color: $colorPrimary;
+            &:before {
+                left: -12px;
+                bottom: 5px;
+                width: 9px;
+                height: 9px;
+                content: '';
+                position: absolute;
+                transform: rotate(45deg);
+                border-bottom: solid 9px #C00000;
+                border-left: solid 9px transparent;
+                border-right: solid 9px transparent;
+            }
+        }
+    }
+    &__content {
+        border-top: none;
+        padding-top: 30px;
+        &__meta {
+            .list-inline {
+                gap: 15px;
+                margin: 0;
+                display: flex;
+                flex-flow: wrap;
+                li {
+                    gap: 5px;
+                    display: inline-flex;
+                    a {
+                        gap: 8px;
+                        color: $colorBody;
+                        display: inline-flex;
+                        align-items: center;
+                        i {
+                            color: $colorPrimary;
+                        }
+                        img {
+                            border-radius: 100%;
+                        }
+                        &:hover {
+                            color: $colorPrimary;
+                        }
+                    }
+                    span {
+                        img {
+                            border-radius: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        &__heading {
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            a {
+                color: $colorHeading;
+                &:hover {
+                    color: $colorPrimary;
+                }
+            }
+        }
+        &__excerpt {
+            margin-bottom: 20px;
+        }
+    }
+    &:hover {
+        .blog-post {
+            &__figure {
+                a {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+.blog-list {
+    .blog-post__content {
+        .blog-post__content__heading {
+            font-size: 26px;
+        }
+    }
+}
+.blog-posts-layout {
+    .row {
+        .row {
+            .col {
+                &:last-child {
+                    .blog-post {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+ul.entry-meta {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    color: #77838f;
+    margin-bottom: 10px;
+    li {
+        display: inline;
+        font-size: 15px;
+        margin-right: 13px;
+        position: relative;
+        padding-right: 8px;
+        text-transform: capitalize;
+        a {
+            color: $colorBody;
+            &:hover {
+                color: $colorPrimary;
+            }
+        }
+        span {
+            margin-right: 5px;
+            img {
+                border-radius: 100%;
+            }
+        }
+    }
+}

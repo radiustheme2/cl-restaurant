@@ -1,0 +1,151 @@
+/*=======================================================================
+= Food Menu
+=========================================================================*/
+.rtcl-single-faqs-wrapper {
+    padding: 30px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    background-color: $colorWhite;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-section-heading-simple {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-section-heading-simple h3 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-faq-repeater-items {
+    width: 100%;
+    row-gap: 10px;
+    flex-flow: column;
+    display: inline-flex
+}
+
+.rtcl-single-faqs-wrapper .rtcl-faq-repeater-items .faq-item {
+    border-radius: 8px;
+    border: 1px solid $colorPrimary;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-faq-repeater-items .faq-item.active {
+    border-color: $colorPrimary;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-faq-repeater-items .faq-heading {
+    display: flex;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    align-items: center;
+    color: $colorHeading;
+    justify-content: space-between;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-faq-repeater-items .active .faq-heading {
+    color: $colorWhite;
+    background-color: $colorPrimary;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-faq-repeater-items .faq-content {
+    display: none;
+    padding: 25px
+}
+
+.rtcl-single-faqs-wrapper .rtcl-faq-repeater-items .collapse-btn {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    display: flex;
+    font-size: 20px;
+    border-radius: 4px;
+    color: $colorWhite;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $colorPrimary;
+    background-color: $colorPrimary;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-faq-repeater-items .collapse-btn i {
+    line-height: 1
+}
+
+.rtcl-single-faqs-wrapper .rtcl-faq-repeater-items .active .collapse-btn {
+    color: $colorPrimary;
+    border-color: $colorWhite;
+    background-color: $colorWhite;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-faq-repeater-items .iconMinus {
+    display: flex;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-faq-repeater-items .iconMinus {
+    display: none;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-faq-repeater-items .active .iconMinus {
+    display: flex;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-faq-repeater-items .active .iconPlus {
+    display: none;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-food-menu-repeater .food-menu-item {
+    gap: 15px;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-food-menu-repeater .food-menu-item:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-food-menu-repeater .food-menu-item .menu-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 3px;
+    color: var(--color-heading);
+}
+
+.rtcl-single-faqs-wrapper .rtcl-food-menu-repeater .food-menu-item .menu-price {
+    top: 8px;
+    right: 10px;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.1em;
+    position: absolute;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-food-menu-repeater .food-menu-item .menu-image {
+    max-width: 90px;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-food-menu-repeater .food-menu-item .menu-image img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.rtcl-single-faqs-wrapper .rtcl-food-menu-repeater .food-menu-item .menu-desc {
+    flex: 1;
+}
+
+@media screen and (max-width: 575px) {
+    .rtcl-single-faqs-wrapper .rtcl-food-menu-repeater .food-menu-item {
+        flex-direction:column;
+        align-items: flex-start!important;
+    }
+
+    .rtcl-single-faqs-wrapper .rtcl-food-menu-repeater .food-menu-item .menu-price {
+        margin-top: 10px;
+        position: static!important;
+    }
+}

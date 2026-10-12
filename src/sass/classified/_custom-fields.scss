@@ -1,0 +1,170 @@
+/*=======================================================================
+= Custom Fields
+=========================================================================*/
+.rtcl-single-custom-fields {
+    .rtcl-cf-properties {
+        display: flex;
+        flex-flow: column;
+    }
+    .section-columns {
+        display: flex;
+        gap: 20px;
+        .section-column {
+            flex: 1;
+            gap: 15px;
+            min-width: 0;
+            display: flex;
+            flex-flow: column;
+        }
+    }
+}
+/* Section 4 columns */
+.rtcl-single-custom-fields .section-columns-4 .section-column {
+    width: calc(100% / 4 - 13.33px);
+}
+/* Section 3 columns */
+.rtcl-single-custom-fields .section-columns-3 .section-column {
+    width: calc(100% / 3 - 13.33px);
+}
+/* Section 2 columns */
+.rtcl-single-custom-fields .section-columns-2 .section-column {
+    width: calc(100% / 2 - 13.33px);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .section-columns {
+        flex-direction: column;
+    }
+}
+
+.rtcl-single-custom-fields {
+    margin-bottom: 24px;
+    .rtcl-section-heading {
+        display: none;
+    }
+    span.delimiter {
+        display: none;
+    }
+    .rtcl-cfp-item {
+        flex-flow: column;
+       .cfp-label {
+           font-size: 1.2rem;
+           margin-bottom: 5px;
+       }
+        .cfp-value {
+            column-gap: 32px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            width: 100%;
+            flex-flow: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+    }
+}
+.rtcl-cf-properties {
+    .section-columns {
+        .section-column {
+            width: 100%;
+            display: inline-flex;
+        }
+    }
+    .rtcl-cfp-repeater>.rtcl-cfp-label-wrap {
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+}
+.form-section-box {
+    border-radius: 12px;
+    background-color: #fff;
+
+    h3 {
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+    ul.section-elements {
+        .cfp-label {
+            font-weight: 700;
+            color: $colorHeading;
+        }
+    }
+}
+/* = Checkbox groups (e.g. Our Amenities)
+ * Each group is a soft card: small uppercase heading with a primary accent,
+ * values in a responsive grid, each with a check in a soft primary circle.
+ * Outranks the plugin's label-left grid
+ * (`.rtcl-single-custom-fields .rtcl-cf-properties .rtcl-cfp-item`).
+=============================================================*/
+.rtcl-single-custom-fields .rtcl-cf-properties .rtcl-cfp-item.rtcl-cfp-checkbox {
+    display: block;
+    padding: 20px 22px;
+    border: 1px solid #eef0f2;
+    border-radius: 12px;
+    background-color: #fcfcfd;
+
+    &:last-child {
+        border-bottom: 1px solid #eef0f2;
+    }
+
+    .rtcl-cfp-label-wrap {
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+
+        &:before {
+            content: "";
+            flex: 0 0 3px;
+            width: 3px;
+            height: 14px;
+            border-radius: 3px;
+            background-color: $colorPrimary;
+        }
+    }
+
+    .cfp-label {
+        margin: 0;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1.3;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $colorHeading;
+    }
+
+    .cfp-value {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        gap: 12px 16px;
+        width: 100%;
+    }
+
+    .rtcl-cfp-vi {
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: $colorHeading;
+
+        i {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 22px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            font-size: 11px;
+            line-height: 1;
+            color: $colorPrimary;
+            background-color: rgba(242, 41, 41, 0.1);
+            background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+        }
+    }
+}

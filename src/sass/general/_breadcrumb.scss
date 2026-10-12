@@ -1,0 +1,60 @@
+/*=======================================================================
+= Breadcrumb Area
+=========================================================================*/
+.breadcrumbs-banner {
+    overflow: hidden;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $colorDark;
+    border-bottom: 1px solid #E4E4E4;
+    @media only screen and (max-width: 991px) {
+        padding: 40px 0;
+    }
+    &:before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        content: "";
+        height: 100%;
+        position: absolute;
+        background-color: $colorHeading;
+    }
+    .breadcrumbs-area {
+        position: relative;
+        .heading-title {
+            font-size: 48px;
+            margin-bottom: 0;
+            @media only screen and (max-width: 767px) {
+                font-size: 40px;
+            }
+            @media only screen and (max-width: 575px) {
+                font-size: 36px;
+                line-height: 42px;
+            }
+        }
+        .entry-breadcrumb {
+            margin-top: 5px;
+            color: $colorBody;
+            text-transform: capitalize;
+            span[property="itemListElement"] {
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            a {
+                color: $colorBody;
+                &:hover {
+                    color: $colorPrimary;
+                }
+            }
+            span.current-item {
+                color: $colorHeading;
+            }
+        }
+    }
+}

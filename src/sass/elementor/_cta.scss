@@ -1,0 +1,42 @@
+/*=======================================================================
+= Call To Active
+=========================================================================*/
+.call-to-action {
+    .frm-fluent-form {
+        position: relative;
+        .ff-el-group {
+            margin: 0;
+        }
+        .ff-el-form-control {
+            border-radius: 12px;
+            padding: 15px 20px;
+            &:focus {
+                border-color: transparent;
+            }
+            border: none;
+            padding-left: 45px;
+            background-repeat: no-repeat;
+            background-position: 18px center;
+            background-image: url(../img/theme/sms.svg);
+        }
+        .ff_submit_btn_wrapper {
+            top: 2px;
+            right: 5px;
+            position: absolute;
+            .ff-btn-submit {
+                margin: 0;
+                width: 45px;
+                height: 45px;
+                border-radius: 100%;
+                transition: $transition;
+                background-color: $colorPrimary;
+                &:hover {
+                    background-color: $colorHPrimary;
+                    box-shadow: 0 0 20px 0 rgba(242,41,41,0.6);
+                    -webkit-box-shadow: 0 0 20px 0 rgba(242,41,41,0.6);
+                    -moz-box-shadow: 0 0 20px 0 rgba(242,41,41,0.6);
+                }
+            }
+        }
+    }
+}

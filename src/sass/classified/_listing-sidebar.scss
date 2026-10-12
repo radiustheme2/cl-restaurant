@@ -1,0 +1,1209 @@
+/*=======================================================================
+= Listing Sidebar
+=========================================================================*/
+.rtcl-widget-filter-class {
+    background-color: transparent;
+    .panel-block {
+        padding: 0;
+        ul.filter-list {
+            li:not(.is-parent) {
+                padding-left: 0;
+                a:before {
+                    top: 3px;
+                }
+            }
+
+            li {
+                ul.sub-list {
+                    margin-left: 0;
+                    padding-left: 50px;
+                    li {
+                        a:before {
+                            top: 13px;
+                            left: -12px;
+                            font-size: 12px;
+                            line-height: 1;
+                            color: $colorBody;
+                            font-weight: 600;
+                            content: '\f105';
+                            position: absolute;
+                            vertical-align: top;
+                            font-family: 'Font Awesome 5 Free';
+                        }
+
+                        a:hover:before {
+                            color: $colorPrimary;
+                        }
+                    }
+                }
+                &.has-sub {
+                    .arrow i {
+                        font-size: 10px;
+                    }
+                }
+                .rtcl-cat-icon.rtcl-icon {
+                    font-size: 16px;
+                    color: $colorPrimary;
+                    background-color: #FFF0F0;
+                    height: 36px;
+                    width: 36px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100%;
+                    transition: $transition;
+					&.clr-icon-icon-restaurant,
+					&.clr-icon-rt18-drinks {
+						font-size: 20px;
+					}
+					&.clr-icon-r-cat10 {
+						font-size: 14px;
+					}
+					&.clr-icon-r-cat12 {
+						font-size: 11px;
+					}
+                }
+                &:hover {
+                    .rtcl-cat-icon.rtcl-icon {
+                        color: $colorWhite;
+                        background-color: $colorPrimary;
+                    }
+                }
+            }
+            >li>a {
+                color: $colorBody;
+                &:hover {
+                    color: $colorPrimary;
+                }
+            }
+            >li>ul>li>a {
+                color: $colorBody;
+                &:hover {
+                    color: $colorPrimary;
+                }
+                
+            }
+            >li>a:before {
+                display: none;
+            }
+        }
+        
+        .rtcl-filter-form {
+            .ui-accordion-item {
+                .ui-accordion-title {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 20px;
+                    border-bottom: 0;
+                    span {
+                        color: $colorHeading;
+                        font-family: $fontHeading;
+                    }
+                }
+                &:not(:first-child) .ui-accordion-title {
+                    margin-top: 0;
+                }
+                .ui-accordion-icon {
+                    margin-top: 7px;
+                }
+            }
+            .rtcl-rating-filter {
+                ul.ui-link-tree {
+                    margin-top: 10px;
+                }
+            }
+            .rtcl-filter-btn {
+				border: none;
+                padding: 12px;
+                font-weight: 500;
+                border-radius: 8px;
+				background-color: $colorPrimary;
+				&:active,
+				&:focus {
+					outline: none;
+					box-shadow: none;
+					background-color: $colorHPrimary;
+				}
+            }
+        }
+    }
+}
+
+.rtcl-widget-categories-class ul, 
+.rtcl-widget-filter-class ul, 
+.rtcl-widget-listing-class ul, 
+.rtcl-widget-search-class ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 10px;
+    border-top: 1px solid $colorLine;
+}
+
+.listing-sidenar-widgets {
+	row-gap: 30px;
+	display: inline-flex;
+	width: 100%;
+	flex-flow: column;
+	.rtcl-ajax-filter-cf-wrap {
+		margin-top: 30px;
+	}
+	.rtcl-widget-filter-wrapper {
+		.rtcl-widget-heading {
+			padding: 20px 30px;
+			border-radius: 12px;
+			margin-bottom: 24px;
+			background-color: $colorWhite;
+			h3 {
+				margin: 0;
+				padding: 0;
+				font-size: 24px;
+				font-weight: 600;
+				line-height: 1.3;
+				color: $colorHeading;
+				background-color: transparent;
+			}
+		}
+	}
+    .rtcl-category-filter,
+    .rtcl-location-filter,
+    .rtcl-radius-filter,
+	.rtcl-rating-filter,
+	.rtcl-price-filter,
+	.rtcl-tag-filter,
+	.rtcl-cfg-filter {
+        padding: 20px 30px;
+        border-radius: 12px;
+        margin-bottom: 24px;
+        background-color: $colorWhite;
+    }
+    .rtcl-rating-filter {
+        .ui-link-tree {
+            padding-top: 15px;
+        }
+    }
+    .rtcl-radius-filter,
+    .rtcl-price-filter,
+    .rtcl-cfg-filter {
+        .ui-accordion-content {
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 1px solid $colorLine;
+        }
+    }
+    .rtcl-geo-address-field i.rtcl-icon {
+        right: 5px;
+    }
+    .rtcl-range-slider-field {
+        margin-top: 10px;
+		position: relative;
+    }
+}
+
+/* - RadiusSearch Range - */
+.irs {
+	font-family: $fontBody;
+}
+.irs--flat .irs-handle > i:first-child {
+	width: 14px;
+	height: 14px;
+	background-color: $colorPrimary;
+	margin-left: -11px;
+	border-width: 3px;
+	border-color: rgb(255, 255, 255);
+	border-style: solid;
+	border-radius: 50%;
+	box-shadow: 1px 3px 7px 0 rgba(87, 101, 128, 40%);
+	box-sizing: content-box;
+	top: -2px;
+}
+.irs--flat .irs-line {
+    height: 6px;
+    border-radius: 4px;
+    background-color: #e9ecf2;
+}
+.irs--flat .irs-bar {
+    height: 6px;
+    background-color: $colorPrimary;
+}
+.irs--flat .irs-handle {
+    top: 19px;
+}
+.irs-from, 
+.irs-to,
+.irs-single {
+    top: -3px;
+}
+.irs--flat .irs-from, 
+.irs--flat .irs-to, 
+.irs--flat .irs-single {
+    background-color: $colorPrimary;
+}
+.irs--flat .irs-from:before, 
+.irs--flat .irs-to:before, 
+.irs--flat .irs-single:before {
+    border-top-color: $colorPrimary;
+}
+.rtcl-range-slider-field .irs--flat .irs-min,
+.rtcl-range-slider-field .irs--flat .irs-max,
+.rtcl-radius-filter .irs--flat .irs-min,
+.rtcl-radius-filter .irs--flat .irs-max {
+	display: none !important;
+}
+
+/* - Listing Details Sidebar - */
+.rtcl {
+	.rtcl-post-section-title {
+		margin-top: 25px;
+	}
+	.listing-sidebar {
+		.rtcl-listing-user-info,
+        .rtclbh-block,
+		.sidebar-map {
+			border: none;
+            font-size: 14px;
+			border-radius: 12px;
+			padding: 25px 30px 30px;
+
+			&.chat-form,
+			&.contact-form {
+				text-align: center;
+				padding: 10px 30px;
+				margin-bottom: 24px;
+				background-color: $colorWhite;
+				.list-group-item {
+					padding: 0;
+					border: none;
+					text-align: center;
+					.media {
+						width: auto;
+						gap: 5px;
+						font-size: 22px;
+						align-items: center;
+						display: inline-flex;
+						.rtcl-icon {
+							color: $colorPrimary;
+						}
+						a {
+							color: $colorHeading;
+							font-family: $fontHeading;
+							font-size: 18px;
+							font-weight: 500;
+							&:hover {
+								color: $colorPrimary;
+							}
+						}
+					}
+					.form-vertical {
+						.form-group {
+							margin-bottom: 10px;
+						}
+					}
+				}
+			}
+
+			&.chat-form {
+				margin-bottom: 24px;
+				.rtcl-chat-link {
+					gap: 5px;
+					padding: 0;
+					font-size: 18px;
+					align-items: center;
+					display: inline-flex;
+					font-family: $fontHeading;
+					color: $colorHeading;
+					background-color: transparent;
+					i {
+						color: $colorPrimary;
+					}
+					&:hover {
+						color: $colorPrimary;
+					}
+				}
+			}
+
+			.list-group {
+				padding: 0;
+				.listing-author {
+					display: flex;
+					margin-bottom: 0;
+					margin-top: 20px;
+					align-items: center;
+					.author-logo-wrapper {
+						width: 80px;
+						margin-right: 10px;
+						.directory-block__poster__thumb {
+							border-radius: 50%;
+							overflow: hidden;
+							border: 3px solid #fff;
+							img {
+								width: 70px;
+								height: 70px;
+								border-radius: 100%;
+							}
+						}
+					}
+					.author-info-wrapper {
+						.author-name {
+							gap: 5px;
+							margin: 0;
+							display: flex;
+							font-size: 20px;
+							align-items: center;
+						}
+						.rtin-user-item {
+							.rtcl-sv-sign {
+								gap: 5px;
+								cursor: pointer;
+								margin-right: 3px;
+								display: flex;
+								align-items: center;
+								i {
+									font-size: 16px;
+								}
+								.verified-text {
+									margin: 0;
+									padding: 0;
+									opacity: 1;
+									width: auto;
+									border: none;
+									color: $colorBody;
+									position: unset;
+									box-shadow: none;
+									transform: translate(0);
+									background-color: transparent;
+									&:after {
+										display: none;
+									}
+								}
+							}
+						}
+					}
+				}
+				.list-group-item {
+					border-color: $colorLine;
+				}
+				.info-list {
+					gap: 5px;
+					margin: 0;
+					padding: 0;
+					display: flex;
+					flex-flow: column;
+					list-style: none;
+					margin-top: 20px;
+					li {
+						i {
+							margin-right: 5px;
+							color: $colorPrimary;
+						}
+						svg path {
+							fill: $colorPrimary;
+						}
+						a {
+							color: $colorBody;
+							&:hover {
+								color: $colorPrimary;
+							}
+						}
+					}
+				}
+			}
+
+			.rtcl-map {
+				height: 220px;
+			}
+		}
+		.rtcl-listing-side-title {
+			padding: 0;
+			padding-bottom: 10px;
+			border-color: $colorLine;
+		}
+		.sidebar-map {
+			margin-top: 24px;
+			background-color: #ffffff;
+		}
+        .rtclbh-block {
+            table.rtclbh {
+                margin: 0;
+            }
+        }
+
+		aside.sidebar-widget {
+			margin-top: 24px;
+			img {
+				border-radius: 8px;
+			}
+		}
+	}
+}
+
+.rtcl-social-profile-wrap {
+	box-shadow: none;
+}
+
+.rtcl-social-profile-wrap .rtcl-social-profile-label {
+	display: none;
+}
+
+.rtcl-user-status {
+	width: 10px;
+	height: 10px;
+	position: relative;
+	border-radius: 50px;
+	background-color: #bfbfbf;
+	.user-staus-text {
+		background-color: #bfbfbf;
+		bottom: 100%;
+		-ms-box-shadow: 2px 2px 6px rgba(0,0,0,.28);
+		-o-box-shadow: 2px 2px 6px rgba(0,0,0,.28);
+		box-shadow: 2px 2px 6px rgba(0,0,0,.28);
+		color: $colorHeading;
+		display: block;
+		font-size: 14px;
+		left: -40px;
+		margin-bottom: 5px;
+		opacity: 0;
+		pointer-events: none;
+		position: absolute;
+		text-align: center;
+		transform: translateY(10px);
+		transition: all .25s ease-out;
+		width: 100px;
+		padding: 4px;
+		border-radius: 4px;
+		&:before {
+			bottom: -10px;
+			content: " ";
+			display: block;
+			height: 10px;
+			left: 0;
+			position: absolute;
+			width: 100%;
+		}
+		&:after {
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 5px solid #bfbfbf;
+			bottom: -5px;
+			content: " ";
+			height: 0;
+			left: 50%;
+			margin-left: -10px;
+			position: absolute;
+			width: 0;
+		}
+	}
+	&:hover {
+		.user-staus-text {
+			opacity: 1;
+			pointer-events: auto;
+			transform: translateY(0);
+		}
+	}
+	&.online {
+		background-color: #0acd1e;
+		.user-staus-text {
+			color: $colorWhite;
+			background-color: #0acd1e;
+			&:after {
+				border-top-color: #0acd1e;
+			}
+		}
+	}
+}
+
+.rtcl .listing-sidebar .rtcl-listing-user-info.chat-form .rtcl-chat-link, 
+.rtcl .listing-sidebar .rtclbh-block.chat-form .rtcl-chat-link {
+	font-weight: 500;
+}
+
+.search-box {
+	position: relative;
+	.cf-inner.conditional-search-field {
+		z-index: 9;
+		width: 100%;
+		position: absolute;
+		text-align: center;
+		padding-right: 30px;
+		margin-top: -30px;
+
+		.pageloader {
+			width: 30px;
+			height: 30px;
+			margin-top: 15px;
+			display: inline-flex;
+			border: 2px solid $colorPrimary;
+			border-bottom: 2px solid transparent;
+
+			.inner {
+				width: 15px;
+				height: 15px;
+				border: 2px solid transparent;
+				border-top: 2px solid $colorPrimary;
+			}
+		}
+
+		.rtcl-cf-wrap {
+			text-align: left;
+			padding-top: 20px;
+			padding-left: 30px;
+			padding-bottom: 30px;
+			background-color: $colorWhite;
+			box-shadow: 0px 0px 8px #7c7c7c3b;
+			transition: all 0.5s ease-in-out;
+
+			.rtcl-cf-label {
+				font-size: 20px;
+				font-weight: 500;
+			}
+
+			.rtcl-check-list {
+				.form-check {
+					padding-left: 0;
+					line-height: 29px;
+					margin-right: 30px;
+					display: inline-flex;
+
+					input[type=checkbox] {
+						width: 19px;
+						height: 19px;
+						border: 2px solid #d0d0d0;
+						background-color: $colorWhite;
+						cursor: pointer;
+						display: none;
+					}
+
+					label {
+						padding-left: 27px;
+						position: relative;
+
+						&:before {
+							left: 0;
+							top: 5px;
+							width: 19px;
+							height: 19px;
+							content: "\f00c";
+							margin-right: 10px;
+							position: absolute;
+							border-radius: 4px;
+							display: inline-block;
+							background-color: #FFF4F5;
+							border: 2px solid #FFC3C7;
+							-webkit-box-sizing: border-box;
+							-moz-box-sizing: border-box;
+							box-sizing: border-box;
+							transition: 0.3s;
+							font-family: "Font Awesome 5 Free";
+							font-weight: 900;
+							font-size: 11px;
+							color: #fff;
+							text-align: center;
+							line-height: 16px;
+						}
+					}
+
+					input[type=checkbox]:checked+label:before {
+						border-color: #f91942;
+						background-color: #f91942;
+					}
+				}
+			}
+
+		}
+		&.success-list {
+			.rtcl-cf-wrap {
+				margin-top: -10px;
+			}
+		}
+	}
+
+	.form-check label {
+		font-size: 14px;
+		cursor: pointer;
+		position: relative;
+		padding-left: 26px;
+		display: inline-block;
+		transition: $transition;
+	}
+	
+	.form-check label i {
+		color: #ffbc09;
+		margin-right: 4px;
+	}
+	
+	.form-check label:before {
+		left: 0;
+		top: 4px;
+		width: 20px;
+		content: "";
+		height: 20px;
+		border-radius: 4px;
+		position: absolute;
+		display: inline-block;
+		background-color: #FFF4F5;
+		border: 1px solid #FFC3C7;
+		transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+	
+	}
+	.form-check label:hover {
+		color: $colorPrimary;
+	}
+	.form-check label:hover:before {
+		border-color: $colorPrimary;
+		animation: checkHover .3s ease-in-out forwards;
+	}
+	
+	
+	@-webkit-keyframes checkHover {
+		0%, 100% {
+			transform: scale(1)
+		}
+		50% {
+			transform: scale(0.7)
+		}
+	}
+	
+	@keyframes checkHover {
+		0%, 100% {
+			transform: scale(1)
+		}
+		50% {
+			transform: scale(0.7)
+		}
+	}
+
+	// Checkbox Style
+	.checkbox-wrapper {
+		overflow: hidden;
+		display: grid;
+		gap: 6px 10px;
+		grid-template-columns: repeat(1,1fr);
+		@media(min-width: 1900px) {
+			grid-template-columns: repeat(2,1fr);
+		}
+		.form-check {
+			padding-left: 0;
+		}
+	}
+
+	.form-check label:after {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		top: 3px;
+		left: 6px;
+		font-size: 10px;
+		line-height: 22px;
+	}
+
+	.form-check input[type="checkbox"] {
+		cursor: pointer;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		top: 4px;
+		left: 20px;
+		z-index: 1;
+		opacity: 0;
+		margin-top: 0;
+	}
+
+	.form-check input[type="checkbox"]:checked + label {
+		color: #000000;
+	}
+
+	.form-check input[type="checkbox"]:checked + label:after {
+		font-family: 'Font Awesome 5 Free';
+		content: "\f00c";
+		font-weight: 600;
+	}
+
+	.form-check input[type="checkbox"]:disabled + label {
+		opacity: 0.65;
+	}
+
+	.form-check input[type="checkbox"]:disabled + label:before {
+		background-color: #eeeeee;
+		cursor: not-allowed;
+	}
+
+	.form-check label::before {
+		border-radius: 4px;
+	}
+
+	.form-check input[type="checkbox"]:checked + label:before {
+		border-color: $colorPrimary;
+		background-color: $colorPrimary;
+	}
+
+	.form-check input[type="checkbox"]:checked + label:after {
+		color: #ffffff;
+	}
+}
+
+.rtcl-cfg-filter {
+    position: relative;
+
+    .form-check label {
+		font-size: 14px;
+		cursor: pointer;
+		position: relative;
+		padding-left: 26px;
+		display: inline-block;
+		transition: $transition;
+	}
+	
+	.form-check label i {
+		color: #ffbc09;
+		margin-right: 4px;
+	}
+	
+	.form-check label:before {
+		left: 0;
+		top: 2px;
+		width: 20px;
+		content: "";
+		height: 20px;
+		border-radius: 4px;
+		position: absolute;
+		display: inline-block;
+		background-color: #FFF4F5;
+		border: 1px solid #FFC3C7;
+		transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+	
+	}
+	.form-check label:hover {
+		color: $colorPrimary;
+	}
+	.form-check label:hover:before {
+		border-color: $colorPrimary;
+		animation: checkHover .3s ease-in-out forwards;
+	}
+	
+	
+	@-webkit-keyframes checkHover {
+		0%, 100% {
+			transform: scale(1)
+		}
+		50% {
+			transform: scale(0.7)
+		}
+	}
+	
+	@keyframes checkHover {
+		0%, 100% {
+			transform: scale(1)
+		}
+		50% {
+			transform: scale(0.7)
+		}
+	}
+
+	// Checkbox Style
+	.checkbox-wrapper {
+		overflow: hidden;
+		display: grid;
+		gap: 6px 10px;
+		grid-template-columns: repeat(1,1fr);
+		// @media(min-width: 1900px) {
+		// 	grid-template-columns: repeat(2,1fr);
+		// }
+		.form-check {
+			padding-left: 0;
+		}
+	}
+
+	.form-check label:after {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		top: 3px;
+		left: 6px;
+		font-size: 10px;
+		line-height: 22px;
+	}
+
+	.form-check input[type="checkbox"] {
+		cursor: pointer;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		top: 4px;
+		left: 20px;
+		z-index: 1;
+		opacity: 0;
+		margin-top: 0;
+	}
+
+	.form-check input[type="checkbox"]:checked + label {
+		color: #000000;
+	}
+
+	.form-check input[type="checkbox"]:checked + label:after {
+		font-family: 'Font Awesome 5 Free';
+		content: "\f00c";
+		font-weight: 600;
+	}
+
+	.form-check input[type="checkbox"]:disabled + label {
+		opacity: 0.65;
+	}
+
+	.form-check input[type="checkbox"]:disabled + label:before {
+		background-color: #eeeeee;
+		cursor: not-allowed;
+	}
+
+	.form-check label::before {
+		border-radius: 4px;
+	}
+
+	.form-check input[type="checkbox"]:checked + label:before {
+		border-color: $colorPrimary;
+		background-color: $colorPrimary;
+	}
+
+	.form-check input[type="checkbox"]:checked + label:after {
+		color: #ffffff;
+	}
+}
+
+.rtcl-social-profile-wrap {
+	padding: 0;
+    border: none;
+    margin-bottom: 0;
+	.rtcl-social-profile-label {
+		color: #111111;
+		font-weight: 500;
+		margin-right: 10px;
+		font-family: $fontHeading;
+		
+	}
+	.rtcl-social-profiles {
+		a[title="Twitter"] {
+			border-radius: 100%;
+			background-color: $twitter;
+			&:hover {
+				background-color: rgba($twitter, 0.8);
+			}
+		}
+		.rtcl-icon {
+			width: 30px;
+			height: 30px;
+			color: $colorWhite;
+			align-items: center;
+			border-radius: 100%;
+			display: inline-flex;
+			justify-content: center;
+			transition: $transition;
+			&.rtcl-icon-facebook {
+				background-color: $facebook;
+				&:hover {
+					background-color: rgba( $facebook, 0.8 );
+				}
+			}
+			&.rtcl-icon-twitter {
+				background-color: $colorWhite;
+			}
+			&.rtcl-icon-instagram {
+				background-color: $instagram;
+				&:hover {
+					background-color: rgba($instagram, 0.8);
+				}
+			}
+			&.rtcl-icon-linkedin {
+				background-color: $linkedin;
+				&:hover {
+					background-color: rgba($linkedin, 0.8);
+				}
+			}
+			&.rtcl-icon-youtube {
+				background-color: $youtube;
+				&:hover {
+					background-color: rgba($youtube, 0.8);
+				}
+			}
+			&.rtcl-icon-pinterest {
+				background-color: $pinterest;
+				&:hover {
+					background-color: rgba($pinterest, 0.8);
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+    .listing-sidenar-widgets {
+        margin-top: 80px;
+    }
+    .listing-sidebar {
+        margin-top: 80px;
+    }
+}
+
+// Below lg the sidebar collapses to the Ajax Filter's "Show Filter" bar, so
+// put it above the listings instead of after the pagination.
+@media (max-width: 991px) {
+    .listing-archvie-page .listing-sidebar-left,
+    .listing-archvie-page .listing-sidebar-right {
+        order: -1;
+
+        .listing-sidenar-widgets {
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+// Tablets: the plugin only turns the filter into the bar + off-canvas drawer
+// up to 767px. Extend the same design to 768–991px on the archive sidebar.
+// Its open/close script just toggles the drawer's inline `left`, at any width.
+@media (min-width: 768px) and (max-width: 991px) {
+    .listing-archvie-page .rtcl-widget-ajax-filter-wrapper {
+        .rtcl-ajax-filter-floating-mobile {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-height: 52px;
+            padding: 0 8px 0 16px;
+            border: 1px solid var(--rtcl-m-border-strong, #DEDDD8);
+            border-radius: 12px;
+            background: $colorWhite;
+            box-shadow: 0 1px 2px rgba(22, 23, 26, .04);
+            transition: border-color .15s ease, box-shadow .15s ease;
+
+            &:hover {
+                border-color: var(--rtcl-primary-color);
+            }
+
+            h4 {
+                margin: 0;
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 1.3;
+                color: var(--rtcl-m-ink, #16171A);
+            }
+
+            .rtcl-ajax-filter-open-filter {
+                position: static;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                width: 36px;
+                height: 36px;
+                margin-left: auto;
+                padding: 0;
+                border-radius: 8px;
+                background: #F1F0EC;
+                color: var(--rtcl-m-ink, #16171A);
+                cursor: pointer;
+
+                // Stretch the click target over the whole bar.
+                &:after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    border-radius: inherit;
+                }
+
+                strong {
+                    display: none;
+                }
+
+                svg {
+                    width: 18px;
+                    height: auto;
+
+                    path {
+                        fill: currentColor;
+                    }
+                }
+            }
+        }
+
+        &.sidebar-filter-open .rtcl-ajax-filter-floating-mobile {
+            border-color: var(--rtcl-primary-color);
+        }
+
+        &.rtcl-loading {
+            min-height: auto;
+        }
+
+        &.sidebar-filter-open.rtcl-loading .rtcl-loading-overlay {
+            position: fixed !important;
+            width: 260px !important;
+            height: 100% !important;
+            /*!rtl:ignore*/
+            left: 0 !important;
+            z-index: 100000 !important;
+        }
+
+        .rtcl-widget-ajax-filter-class {
+            position: fixed;
+            z-index: 99999;
+            top: 0;
+            /*!rtl:ignore*/
+            left: -265px;
+            flex: 0 0 260px;
+            width: 260px;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            overscroll-behavior: contain;
+            border: 0;
+            border-radius: 0;
+            background-color: $colorWhite;
+            box-shadow: 8px 0 32px rgba(22, 23, 26, .16);
+            transition: 0.5s;
+
+            .rtcl-widget-heading h3,
+            & > h3 {
+                border-radius: 0;
+            }
+
+            .rtcl-widget-heading h3 {
+                position: sticky;
+                top: 0;
+                z-index: 2;
+                background: $colorWhite;
+            }
+        }
+    }
+
+    .sidebar-ajax-filter-opened {
+        position: fixed;
+        z-index: 999;
+        inset: 0;
+        background: rgba(22, 23, 26, .55);
+    }
+}
+
+/* ====== Ajax Filter Widget ====== */
+
+.rtcl-ajax-filter-wrap {
+	background-color: $colorWhite;
+}
+
+// Collapse toggle: round light-primary button, solid primary on hover. The
+// plugin rotates the chevron when the item is open. `body` outranks the
+// plugin's `.rtcl-widget-ajax-filter-class … .rtcl-icon { color: currentColor }`.
+body .rtcl-ajax-filter-item .rtcl-filter-title-wrap {
+	cursor: pointer;
+
+	.rtcl-icon.rtcl-icon-angle-down {
+		flex: 0 0 auto;
+		width: 30px;
+		height: 30px;
+		border: 0;
+		border-radius: 50%;
+		color: $colorPrimary;
+		font-size: 16px;
+		line-height: 1;
+		background-color: rgba(242, 41, 41, 0.08);
+		background-color: color-mix(in srgb, var(--color-primary) 8%, transparent);
+		transition: transform 0.3s, color 0.2s, background-color 0.2s;
+	}
+
+	&:hover .rtcl-icon.rtcl-icon-angle-down {
+		color: $colorWhite;
+		background-color: $colorPrimary;
+	}
+}
+.rtcl-widget-filter-class .panel-block .rtcl-filter-form .ui-accordion-item .ui-accordion-icon {
+	color: $colorWhite !important;
+	background-color: $colorPrimary;
+}
+.rtcl-widget-filter-class .panel-block .rtcl-filter-form .ui-accordion-item .ui-accordion-icon:before {
+	transform: translateY(0);
+}
+
+
+
+/*=======================================================================
+= Business Hours
+=========================================================================*/
+.business-hours-widget {
+	margin-top: 24px;
+	border-radius: 12px;
+	padding: 25px 30px 30px;
+	background-color: #ffffff;
+	.time-table-wrapper {
+		margin-top: 15px;
+		font-size: 15px;
+		.rtclbh-closed,
+		.rtclbh-opened,
+		.rtclbh-period {
+			gap: 2px;
+			display: flex;
+			flex-wrap: nowrap;
+			margin-bottom: 10px;
+			padding-bottom: 8px;
+			border-bottom: 1px solid #E0E3E7;
+		}
+		.rtclbh-closed.rtclbh-active.rtclbh-opened,
+		.rtclbh-opened.rtclbh-active.rtclbh-opened,
+		.rtclbh-period.rtclbh-active.rtclbh-opened {
+			color: green;
+		}
+		.rtclbh-closed.rtclbh-active.rtclbh-opened .day,
+		.rtclbh-opened.rtclbh-active.rtclbh-opened .day,
+		.rtclbh-period.rtclbh-active.rtclbh-opened .day {
+			color: green;
+		}
+		.rtclbh-closed.rtclbh-active.rtclbh-closed,
+		.rtclbh-opened.rtclbh-active.rtclbh-closed,
+		.rtclbh-period.rtclbh-active.rtclbh-closed {
+			color: #ff3c48;
+		}
+		.rtclbh-closed.rtclbh-active.rtclbh-closed .day,
+		.rtclbh-opened.rtclbh-active.rtclbh-closed .day,
+		.rtclbh-period.rtclbh-active.rtclbh-closed .day {
+			color: #ff3c48;
+		}
+		.rtclbh-closed .day,
+		.rtclbh-opened .day,
+		.rtclbh-period .day {
+			width: 70px;
+			font-size: 13px;
+			font-weight: 500;
+			color: var(--color-body);
+		}
+		.rtclbh-closed .time-wrapper,
+		.rtclbh-opened .time-wrapper,
+		.rtclbh-period .time-wrapper {
+			gap: 5px;
+			display: flex;
+			font-size: 13px;
+		}
+		.rtclbh-closed .rtclbh-info {
+			color: #ff3c48;
+		}
+
+		.rtclbh-status.rtclbh-status-open {
+			color: green;
+		}
+
+		.rtclbh-status.rtclbh-status-closed {
+			color: #ff3c48;
+		}
+	}
+}
+/* = Details page: fixed-width sidebar
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+// col-lg-3 is only 240px in the 960px container (992-1199px); keep the sidebar
+// at its widest-container width and let the content column take the rest.
+@include respond-above(md) {
+	.listing-details .row > #sticky_sidebar.col-lg-3 {
+		flex: 0 0 330px;
+		width: 330px;
+		max-width: 330px;
+	}
+	.listing-details .row > .listing-content.col-lg-9 {
+		flex: 1 1 0;
+		width: auto;
+		min-width: 0;
+	}
+}

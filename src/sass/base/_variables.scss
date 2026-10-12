@@ -1,0 +1,66 @@
+/*=======================================================================
+= Variable Declare
+=========================================================================*/
+// Fonts
+$fontBody: var(--body-font, 'sans-serif') ;
+$fontHeading: var(--heading-font, 'sans-serif');
+$fontSubHeading: var(--sub-heading-font, 'sans-serif');
+
+// Colors
+$colorBody: var(--color-body);
+$colorHeading: var(--color-heading);
+$colorPrimary: var(--color-primary);
+$colorHPrimary: #DB000E;
+// #ff3c48
+$colorWhite: #fff;
+$colorBlack: #000;
+$colorOverlay: #242424;
+$colorMeta: #66687B;
+$colorLine: #e8e8e8;
+$colorDark: #F8F8F8;
+$colorGreen: #3D994B;
+$bgFooterColor:#181818;
+$colorParagraph: #6a6a6a;
+
+$facebook: #1877F2;
+$twitter: #1DA1F2;
+$instagram: #E1306C;
+$youtube: #ff0000;
+$linkedin: #0077b5;
+$pinterest: #e60023;
+$reddit: #5f99cf;
+$tiktok: #000000;
+
+$box-shadow: 0px 20px 60px rgba(73, 21, 13, 0.1);
+
+:root {
+    --color-featured: #FD9E11;
+    --color-cta: #043593;
+    --color-cta-bg: #0E46AF;
+    --color-white: #fff;
+    --color-Meta: #66687B;
+    --color-line: #E8E8E8;
+    --color-gray1: #F4F8F9;
+    --color-gray2: #E4E8EA;
+    --color-gray3: #F7F7F7;
+}
+
+$heading-font-size: (
+    h1: 32/16,
+    h2: 28/16,
+    h3: 24/16,
+    h4: 20/16,
+    h5: 16/16,
+    h6: 14/16,
+);
+
+$borderRadius2: 2px;
+$borderRadius4: 4px;
+$borderRadius5: 5px;
+$borderRadius8: 8px;
+$borderRadius10: 10px;
+
+$transition: all .3s ease-in-out;
+
+$zease: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);

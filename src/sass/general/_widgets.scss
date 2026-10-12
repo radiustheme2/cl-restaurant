@@ -1,0 +1,240 @@
+/*=======================================================================
+= Widgets
+=========================================================================*/
+h3.widget-title {
+    font-size: 22px;
+    line-height: 1.3;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $colorLine;
+}
+.sidebar-widget-area {
+    @include respond-below(md) {
+        padding-left: 0;
+        margin-top: 80px;
+    }
+    .widget {
+        padding: 20px 30px 30px;
+        margin-bottom: 24px;
+        border-radius: 12px;
+        background-color: $colorWhite;
+        &.widget_search {
+            padding: 30px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        h2 {
+            font-size: 22px;
+            line-height: 1.3;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $colorLine;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                margin: 5px 0;
+            }
+        }
+        a {
+            color: $colorHeading;
+            &:hover {
+                color: $colorPrimary;
+            }
+        }
+    }
+}
+
+/* = Search Form = */
+.search-form {
+    border-radius: 6px;
+    border: 1px solid #e8e8e8;
+
+    button,
+    input {
+        height: 50px;
+        border: none;
+        border-radius: 6px;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    button {
+        border: none;
+        padding: 0 15px;
+        font-size: 22px;
+        color: #adadad;
+        line-height: 16px;
+        background-color: transparent;
+    }
+}
+
+/* = Recent Posts = */
+.widget-recent {
+    ul.recent-post {
+        li {
+            display: flex;
+            padding-left: 0;
+            padding-top: 5px;
+            padding-bottom: 10px;
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            &:before {
+                display: none;
+            }
+
+            .item-img {
+                overflow: hidden;
+                border-radius: 8px;
+                height: fit-content;
+                a {
+                    width: 110px;
+                    overflow: hidden;
+                    border-radius: 8px;
+
+                    img {
+                        width: 110px;
+                        border-radius: 8px;
+                        transition: $transition;
+                    }
+                }
+            }
+
+            .media-body {
+                .item-title {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    margin-bottom: 5px;
+
+                    a {
+                        color: $colorHeading;
+
+                        &:hover {
+                            color: $colorPrimary;
+                        }
+                    }
+                }
+
+                span {
+                    line-height: 1;
+                    font-size: 13px;
+                    i {
+                        color: $colorPrimary;
+                    }
+                }
+            }
+
+            &:hover {
+                .item-img {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* = Newsletter Form = */
+.widget_cl_restaurant_newsletter {
+    padding: 0 !important;
+}
+
+.newsletter-form {
+    color: $colorWhite;
+    .newsletter-content {
+        padding: 20px;
+        h3.widget-title {
+            border: none;
+            margin-bottom: 0;
+        }
+        p {
+            margin-bottom: 5px;
+        }
+        .fluentform {
+            position: relative;
+            .ff-el-group {
+                margin-top: 15px;
+                margin-bottom: 5px;
+                @include respond-below(sm){
+                    margin-top: 0;
+                }
+            }
+            .ff-el-form-control {
+                height: 45px;
+                border-color: $colorLine;
+                font-family: $fontHeading;
+            }
+            .ff_submit_btn_wrapper_custom {
+                top: 0;
+                right: 0;
+                position: absolute;
+                button {
+                    margin: 5px;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 6px;
+                    align-items: center;
+                    display: inline-flex;
+                    justify-content: center;
+                    background-color: $colorPrimary;
+                }
+            }
+        }
+    }
+    .image {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+/* = Footer = */
+footer {
+    .widget {
+        margin-bottom: 30px;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+        }
+    }
+}
+.widget_block {
+    .wp-block-search {
+        .wp-block-search__label {
+            font-size: 22px;
+            line-height: 1.3;
+            color: $colorHeading;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $colorLine;
+        }
+    } 
+}
+.widget-about {
+    .footer-logo {
+        margin-bottom: 20px;
+        a {
+            font-size: 32px;
+            font-weight: 700;
+            color: $colorWhite;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    p.footer-text {
+        padding-right: 30px;
+    }
+}
+

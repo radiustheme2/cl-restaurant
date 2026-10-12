@@ -1,0 +1,528 @@
+/*=======================================================================
+= Listing Archive
+=========================================================================*/
+.listing-archive-page {
+
+}
+.listing-item,
+.product-box {
+    .item-img {
+        overflow: hidden;
+        position: relative;
+        border-radius: 12px 12px 0 0;
+        .listing-thumb {
+            overflow: hidden;
+            a {
+                width: 100%;
+                img {
+                    width: 100%;
+                    transition: $transition;
+                    transform: scale(1.01);
+                }
+            }
+            &:after {
+                top: 55px !important;
+                width: auto !important;
+                height: auto !important;
+                color: #fff !important;
+                font-size: 13px;
+                font-weight: 600;
+                line-height: 22px;
+                padding: 4.25px 25px 4.25px 12px !important;
+                background: linear-gradient( 90deg, #ed1313 7.07%, #ff522c 110.33% );
+                clip-path: polygon(100% 0,85% 50%,100% 100%,0 100%,0% 50%,0 0) !important;
+            }
+        }
+        .open-close-location-status {
+            left: 0;
+            top: 20px;
+            z-index: 1;
+            position: absolute;
+            .item-status {
+                font-size: 13px;
+                font-weight: 600;
+                color: #fff;
+                background: linear-gradient(90deg,#419E16 7.07%,#17DE13 110.33%);
+                clip-path: polygon(100% 0,85% 50%,100% 100%,0 100%,0% 50%,0 0);
+                padding: 4.25px 25px 4.25px 12px;
+                line-height: 22px;
+                &.status-close {
+                    background: linear-gradient( 90deg, #ed1313 7.07%, #ff522c 110.33% );
+                }
+            }
+        }
+        ul.meta-tags {
+            gap: 5px;
+            top: 20px;
+            z-index: 1;
+            right: 20px;
+            width: 35px;
+            display: flex;
+            flex-flow: column;
+            position: absolute;
+            li {
+                &.meta-quick-view,
+                &.meta-favourite {
+                    opacity: 0;
+                    visibility: hidden;
+                    position: relative;
+                    transition: $transition;
+                    transform: translateY(20px);
+                    span.favourite-label {
+                        display: none;
+                    }
+                    .rtcl-quick-view,
+                    a {
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 100%;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $colorWhite;
+                        span,
+                        i {
+                            height: 28px;
+                            font-size: 18px;
+                        }
+                        &:hover {
+                            background-color: #DB000E !important;
+                        }
+                    }
+                    .animate-spin {
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        animation: spin 2s linear infinite;
+                        display: inline-block;
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #fff;
+                        border-radius: 100%;
+                    }
+                }
+                &.meta-quick-view {
+                    cursor: pointer;
+                    .rtcl-quick-view {
+                        i {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+        }
+        .listing-discount {
+            right: 0;
+            bottom: 23px;
+            color: $colorWhite;
+            position: absolute;
+            padding: 5px 20px;
+            font-weight: 600;
+            font-family: $fontHeading;
+            background-color: $colorPrimary;
+            &:before {
+                left: -12px;
+                bottom: 5px;
+                width: 9px;
+                height: 9px;
+                content: '';
+                position: absolute;
+                transform: rotate(45deg);
+                border-bottom: solid 9px #C00000;
+                border-left: solid 9px transparent;
+                border-right: solid 9px transparent;
+            }
+        }
+        .item-poster-info {
+            margin-top: -42px;
+            position: relative;
+            .directory-block__poster__thumb {
+                width: 125px;
+                margin: 0 5px;
+                padding-top: 7px;
+                text-align: center;
+                background-image: url(../img/theme/shape-bg.svg);
+                background-repeat: no-repeat;
+                img {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 100%;
+                }
+            }
+            span.directory-block__poster__name {
+                padding: 15px 15px 20px;
+            }
+        }
+        &.user-not-show {
+            .listing-discount {
+                bottom: 0;
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+    .item-content {
+        padding: 20px 24px 24px;
+        .product-rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            .star-rating {
+                width: 4.9em;
+                font-size: 20px;
+                &:before {
+                    color: $colorPrimary;
+                }
+                span:before {
+                    color: $colorPrimary;
+                }
+            }
+        }
+        .meta-list {
+            gap: 5px;
+            display: flex;
+            flex-flow: column;
+            margin-top: 10px !important;
+            li {
+                color: $colorHeading;
+                i {
+                    margin-right: 3px;
+                    color: $colorPrimary;
+                }
+                &.meta-address {
+                    i {
+                        font-size: 18px;
+                    }
+                }
+                a {
+                    color: $colorHeading;
+                    &:hover {
+                        color: $colorPrimary;
+                    }
+                }
+            }
+        }
+        .rtcl-listable-item {
+            gap: 10px;
+            display: flex;
+            li {
+                gap: 5px;
+                display: flex;
+                color: $colorHeading;
+                align-items: center;
+                i {
+                    color: #4CC513;
+                }
+                &.cross {
+                    i {
+                        color: $colorPrimary;
+                    }
+                }
+            }
+        }
+        .btn-wrap {
+            margin-top: 20px;
+            a {
+                padding: 5px 20px;
+            }
+        }
+    }
+    &:hover {
+        .item-img {
+            .listing-thumb {
+                a {
+                    width: 100%;
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            ul.meta-tags {
+                li {
+                    &.meta-quick-view,
+                    &.meta-favourite {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                    }
+                    &.meta-quick-view {
+                        transition-delay: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.rtcl {
+
+    .rtcl-listing-badge-wrap {
+        span.rtcl-category {
+            padding: 0;
+            a {
+                height: 30px;
+                padding: 0 10px;
+                border-radius: 4px;
+                color: $colorWhite;
+                align-items: center;
+                display: inline-flex;
+                justify-content: center;
+                background-color: $colorPrimary;
+                .rtcl-cat-icon {
+                    font-size: 12px;
+                    margin-right: 5px;
+                    &.clr-icon-r-cat12 {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .rtcl-listings-actions {
+        gap: 10px;
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 24px;
+        padding: 15px 18px 15px;
+        background-color: #fff;
+        .rtcl-result-count {
+            font-size: 18px;
+            font-weight: normal;
+            color: $colorHeading;
+            font-family: $fontHeading;
+        }
+        .select2-container .select2-selection--single .select2-selection__rendered {
+            padding-left: 10px;
+        }
+        .rtcl-ordering {
+            margin-right: 0;
+        }
+        .rtcl-view-switcher {
+            gap: 8px;
+            display: flex;
+            >a {
+                height: 45px;
+                width: 45px;
+                font-size: 18px;
+                color: $colorPrimary;
+                border-radius: 4px;
+                align-items: center;
+                display: inline-flex;
+                justify-content: center;
+                border: 1px solid rgba(242, 41, 41, 0.2);
+                border-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
+                background-color: rgba(242, 41, 41, 0.07);
+                background-color: color-mix(in srgb, var(--color-primary) 7%, transparent);
+                transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+                &:hover,
+                &.active {
+                    color: $colorWhite;
+                    border-color: $colorPrimary;
+                    background-color: $colorPrimary;
+                }
+            }
+
+        }
+    }
+
+    .rtcl-listings {
+        margin-bottom: 0;
+        &.rtcl-list-view {
+            gap: 24px;
+            display: flex;
+            flex-flow: column;
+            .product-box .item-img ul.meta-tags {
+                top: auto;
+                right: 55px;
+                bottom: 15px;
+                flex-flow: inherit;
+            }
+        }
+        .listing-item {
+            border: none;
+            height: fit-content;
+            &.as-top {
+                border: none;
+            }
+            h3.listing-title {
+                font-size: 22px;
+                font-weight: 600;
+                a {
+                    color: $colorHeading;
+                }
+            }
+        }
+    }
+
+    .rtcl-grid-view {
+        margin-bottom: 0;
+        .listing-item {
+            .product-box {
+                .item-img {
+                    .listing-thumb {
+                        .list-view-img {
+                            display: none;
+                        }
+                    }
+                }
+                .item-content {
+                    padding: 20px 24px 30px;
+                }
+            }
+        }
+    }
+
+    .rtcl-list-view {
+        .listing-item {
+            margin-bottom: 0;
+            border-radius: 8px;
+            .product-box {
+                display: flex;
+                align-items: center;
+                // The plugin makes `.listing-item` a flex row; without this the
+                // box shrinks to the photo's natural width instead of the row.
+                flex: 1 1 auto;
+                width: 100%;
+                min-width: 0;
+                // Side by side down to tablets; stack only on phones, where the
+                // plugin also turns the item into a column.
+                @media (max-width: 767px) {
+                    flex-flow: column;
+                }
+                .item-img {
+                    overflow: visible;
+                    border-top-left-radius: 16px;
+                    border-bottom-left-radius: 16px;
+                    @media (min-width: 768px) {
+                        flex: 0 0 300px;
+                        width: 300px;
+                    }
+                    @media (min-width: 1320px) {
+                        flex-basis: 350px;
+                        width: 350px;
+                    }
+                    .listing-thumb {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                        img {
+                            border-top-left-radius: 8px;
+                            border-bottom-left-radius: 8px;
+                            @media (max-width: 767px) {
+                                border-top-right-radius: 8px;
+                                border-bottom-left-radius: 0;
+                            }
+                        }
+                        .grid-view-img {
+                            display: none;
+                        }
+                    }
+                    @media (min-width: 768px) {
+                        .item-poster-info {
+                            top: 50%;
+                            right: -64px;
+                            margin-top: -42px;
+                            position: absolute;
+                            .directory-block__poster__thumb {
+                                transform: rotate(-90deg);
+                                img {
+                                    transform: rotate(90deg);
+                                }
+                            }
+                        }
+                        .listing-discount {
+                            bottom: 0;
+                            left: 0;
+                            right: auto;
+                            border-bottom-left-radius: 8px;
+                            &:before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .item-content {
+                    padding: 0 20px;
+                    padding-left: 60px;
+                    word-break: break-word;
+                    @media (max-width: 767px) {
+                        margin-top: 30px;
+                        padding-left: 0;
+                    }
+                    .rtcl-listable-item {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+.rtcl .rtcl-list-view#top-listing-wrapper .is-top,
+.rtcl .rtcl-list-view .listing-item.is-featured {
+    margin-bottom: 0;
+}
+
+
+.rtcl .rtcl-listings .listing-item.is-featured,
+.rtcl .rtcl-listings .listing-item.as-top {
+    background-color: $colorWhite;
+}
+
+.rtcl .rtcl-btn .rtcl-icon, .rtcl-btn .rtcl-icon {
+    margin-right: 0;
+}
+
+.rtcl .rtcl-btn .rtcl-icon, .rtcl-btn .rtcl-icon {
+    color: $colorWhite;
+}
+
+
+/* = Dashboard = */
+.rtcl-MyAccount-wrap {
+    .rtcl-MyAccount-navigation {
+        flex: 0 0 300px;
+        max-width: 300px;
+        flex-flow: column;
+        background-color: #1d2327;
+    }
+}
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-content .rtcl-payment-history-wrap,
+.rtcl-chat-content-wrapper {
+    padding: 30px;
+    border-radius: 6px;
+    background-color: $colorWhite;
+}
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-content .rtcl-user-info .rtcl-user-content {
+    flex: 50%;
+    max-width: 50%;
+}
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--logout,
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--add-listing {
+    background-color: transparent;
+}
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--logout a,
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--add-listing a {
+    color: inherit;
+}
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--add-listing a:before,
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--logout a:before,
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link a:before,
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link a:before {
+    background-color: #bebebe !important;
+}
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--logout a:hover:before,
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.is-active a:before,
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link:hover a:before {
+    background-color: $colorPrimary !important;
+}

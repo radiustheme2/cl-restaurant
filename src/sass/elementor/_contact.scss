@@ -1,0 +1,55 @@
+/*=======================================================================
+= Section Head
+=========================================================================*/
+.title-line .elementor-heading-title,
+h3.fluentform-widget-title {
+    position: relative;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $colorLine;
+    &:after {
+        left: 0;
+        bottom: 0;
+        content: '';
+        height: 2px;
+        width: 100px;
+        position: absolute;
+        background-color: $colorPrimary;
+    }
+}
+.contact-us-form {
+    padding: 15px 24px 30px;
+    border-radius: 12px;
+    background-color: $colorWhite;
+    h3.fluentform-widget-title {
+        margin-bottom: 30px;
+    }
+    .fluentform {
+        .ff-el-form-control {
+            height: 60px;
+            padding: 0 20px;
+            border-radius: 6px;
+            border-color: transparent;
+            background-color: $colorDark;
+            &:focus {
+                border-color: $colorPrimary;
+            }
+        }
+        textarea {
+            &.ff-el-form-control {
+                height: 180px;
+                padding: 20px;
+            }
+        }
+        .ff-el-group.ff_submit_btn_wrapper {
+            margin-bottom: 0;
+            text-align: center;
+            .ff-btn-submit {
+                padding: 10px 25px;
+                border-radius: 50px;
+                transition: $transition;
+                background-color: $colorPrimary;
+                box-shadow: 4px 4px 16px rgba(203, 19, 19, 0.25);
+            }
+        }
+    }
+}

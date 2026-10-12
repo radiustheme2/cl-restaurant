@@ -1,0 +1,327 @@
+/*=======================================================================
+= Listing Locations
+=========================================================================*/
+.listing-box-wrap {
+    .rt-global-slider {
+        overflow: hidden;
+    }
+}
+.location-box-layout-1 {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: $colorWhite;
+    .item-img {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        display: inline-flex;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            transition: $transition;
+        }
+    }
+    .location-count {
+        text-align: center;
+        .item-title {
+            margin-bottom: 10px;
+            a {
+                color: $colorHeading;
+            }
+        }
+        .listing-number {
+            padding: 3px 15px;
+            display: inline-flex;
+            color: $colorPrimary;
+            transition: $transition;
+            border-radius: 30px;
+            background-color: #FFF0F0;
+        }
+    }
+    &:hover {
+        .item-img {
+            img {
+                transform: scale(1.1);
+            }
+        }
+        .item-title {
+            a {
+                color: $colorPrimary;
+            }
+        }
+        .location-count {
+            .listing-number {
+                color: $colorWhite;
+                background-color: $colorPrimary;
+            }
+        }
+    }
+}
+
+.location-box-layout-2 {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    &:after {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        content: "";
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        background-size: cover;
+        transition: all 0.4s ease;
+        background-repeat: no-repeat;
+        border-radius: 0 0 12px 12px;
+        background-image: url(../img/theme/city-overlay.png);
+    }
+    &:hover:after {
+        height: 70%;
+    }
+    .item-img {
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: $transition;
+            transform: scale(1.01);
+        }
+    }
+    .img-location {
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        display: flex;
+        z-index: 1;
+        padding: 12px 30px 12px 45px;
+        position: absolute;
+        align-items: center;
+        border-radius: 10px;
+        justify-content: space-between;
+        z-index: 1;
+        @include respond-below(md){
+            padding: 12px 30px 12px 50px
+        }
+        @include respond-below(sm){
+            padding: 12px 30px 12px 45px;
+        }
+
+        .shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255, 0.25);
+            -webkit-mask: url(../img/theme/mask.svg);
+            mask: url(../img/theme/mask.svg);
+            -webkit-mask-size: 100% 100%;
+            z-index: -1;
+            transition: $transition;
+            @include respond-below(md){
+                -webkit-mask-size: 100% auto;
+            }
+            @media screen and ( max-width: 767px) {
+                display: none;
+            }
+        }
+        .location-count {
+            h4.item-title {
+                margin-bottom: 0;
+                a {
+                    color: $colorWhite;
+                }
+            }
+            .listing-number {
+                color: $colorWhite;
+            }
+        }
+        .btn-box {
+            color: $colorPrimary;
+            background-color: $colorWhite;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            border-radius: 100%;
+            a {
+                display: inline-flex;
+            }
+        }
+        @media screen and ( max-width: 767px) {
+            background-color: rgba(255,255,255, 0.25);
+        }
+    }
+    &:hover {
+        .item-img {
+            img {
+                transform: scale(1.1);
+            }
+        }
+        .img-location {
+            .shape {
+                background-color: rgba(255,255,255, 1);
+                @media screen and ( max-width: 767px) {
+                    display: none;
+                }
+            }
+            .location-count {
+                h4.item-title {
+                    a {
+                        color: $colorHeading;
+                    }
+                }
+                .listing-number {
+                    color: $colorHeading;
+                }
+            }
+            .btn-box {
+                color: $colorWhite;
+                background-color: $colorPrimary;
+                a {
+                    color: $colorWhite;
+                }
+            }
+            @media screen and ( max-width: 767px) {
+                background-color: rgba(255,255,255, 1);
+            }
+        }
+    }
+}
+
+.location-box-layout-3 {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    &:after {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        content: "";
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        background-size: cover;
+        transition: all 0.4s ease;
+        background-repeat: no-repeat;
+        border-radius: 0 0 12px 12px;
+    }
+    &:hover:after {
+        height: 70%;
+    }
+    .item-img {
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: $transition;
+            transform: scale(1.01);
+        }
+    }
+    .img-location {
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        display: flex;
+        z-index: 1;
+        padding: 12px 30px;
+        position: absolute;
+        align-items: center;
+        border-radius: 10px;
+        justify-content: space-between;
+        background-color: #ffffff;
+
+        @include respond-below(md){
+            padding: 12px 30px 12px 50px
+        }
+        @include respond-below(sm){
+            padding: 12px 30px 12px 30px
+        }
+
+        .location-count {
+            h4.item-title {
+                margin-bottom: 0;
+                a {
+                    color: $colorHeading;
+                }
+            }
+            .listing-number {
+                color: $colorHeading;
+            }
+        }
+        .btn-box {
+            color: $colorWhite;
+            background-color: $colorPrimary;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            border-radius: 100%;
+            a {
+                color: $colorWhite;
+                display: inline-flex;
+            }
+        }
+        @media screen and ( max-width: 767px) {
+            background-color: rgba(255,255,255, 0.25);
+        }
+    }
+    &:hover {
+        .item-img {
+            img {
+                transform: scale(1.1);
+            }
+        }
+        .img-location {
+            .shape {
+                background-color: rgba(255,255,255, 1);
+                @media screen and ( max-width: 767px) {
+                    display: none;
+                }
+            }
+            .location-count {
+                h4.item-title {
+                    a {
+                        color: $colorPrimary;
+                    }
+                }
+                .listing-number {
+                    color: $colorHeading;
+                }
+            }
+            .btn-box {
+                color: $colorWhite;
+                background-color: $colorPrimary;
+                a {
+                    color: $colorWhite;
+                }
+            }
+            @media screen and ( max-width: 767px) {
+                background-color: rgba(255,255,255, 1);
+            }
+        }
+    }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, 
+.swiper-pagination-bullets.swiper-pagination-horizontal, 
+.swiper-pagination-custom, 
+.swiper-pagination-fraction {
+    bottom: -60px;
+}
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background-color: $colorPrimary;
+}

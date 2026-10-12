@@ -1,0 +1,31 @@
+/*=======================================================================
+= Footer Newsletter
+=========================================================================*/
+.footer-newsletter {
+    padding-top: 65px;
+    background-color: $colorPrimary;
+    padding-bottom: 65px;
+    background-image: url(../img/theme/cta-bg.png);
+    background-size: cover;
+    background-position: center center;
+    .newsletter-block {
+        &__heading {
+            margin-bottom: 10px;
+        }
+        &__text {
+            margin-bottom: 0;
+            padding-right: 150px;
+            @include respond-below(md){
+                padding-right: 0;
+            }
+        }
+        @include respond-below(md){
+            text-align: center;
+        }
+    }
+    .newsletter-form {
+        @include respond-below(md){
+            margin-top: 30px;
+        }
+    }
+}

@@ -1,0 +1,543 @@
+/*=======================================================================
+= Listings
+=========================================================================*/
+.rtcl.rtcl-elementor-widget {
+    .rtcl-grid-view {
+		&.rtcl-style-1-view {
+			.listing-item:hover {
+				box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.1);
+				.item-poster-info {
+					img {
+						transform: scale(1.0);
+					}
+				}
+			}
+			.listing-title {
+				font-size: 22px;
+				font-weight: 600;
+			}
+		}
+		&.rtcl-style-2-view {
+			.listing-thumb {
+				a {
+					height: 280px;
+					img {
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+	}
+    .rtcl-listings {
+        .rtcl-meta-buttons-wrap {
+            top: 20px;
+            left: auto;
+            right: 20px;
+            bottom: auto;
+            display: flex;
+            flex-flow: column;
+            border-radius: 100%;
+            .rtcl-el-button,
+            .rtcl-fav {
+                margin-bottom: 5px;
+                a {
+                    border-radius: 100%;
+                    color: $colorPrimary;
+                    .rtcl-icon {
+                        display: inline-flex;
+                    }
+                    &:hover {
+                        color: $colorWhite;
+                        background-color: $colorPrimary;
+                    }
+                }
+            }
+            span.rtcl-icon-spinner {
+                top: 0;
+                left: 0;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                border-radius: 100%;
+            }
+        }
+        .rtcl-price {
+			font-size: 20px;
+            color: $colorHeading;
+        }
+		.btn-wrap {
+			display: flex;
+			margin-top: 30px;
+			align-items: center;
+			justify-content: space-between;
+
+			.item-btn {
+				&:hover {
+					color: $colorWhite;
+				}
+			}
+		}
+    }
+}
+.rtcl.rtcl-elementor-widget {
+	.rtcl-grid-view.rtcl-style-2-view {
+		.item-price {
+			margin: 0;
+			display: inline-flex;
+		}
+	}
+}
+.rtcl-slider-btn-style-1 {
+    .rtcl-slider-btn {
+        top: 0;
+        left: auto;
+        right: 0;
+        color: $colorWhite;
+        background-color: $colorPrimary;
+        &.swiper-button-disabled {
+            color: $colorPrimary;
+            background-color: #FFEAEB;
+        }
+    }
+}
+.rtcl-ui-modal {
+	z-index: 999999;
+
+	.rtcl-quick-view-container {
+		.rtcl-qv-gallery {
+			.rtcl-slider-wrapper.mb-4 {
+				margin-bottom: 0 !important;
+			}
+		}
+
+		.rtcl-qv-summary {
+			padding: 0;
+			padding-top: 10px;;
+			padding-left: 30px;
+			.rtcl-qv-title {
+				a {
+					color: $colorHeading;
+
+					&:hover {
+						color: $colorPrimary;
+					}
+				}
+			}
+
+            .rtcl-listing-badge-wrap {
+                margin-bottom: 15px;
+				span.badge {
+					padding: 0;
+					a {
+						padding: 5px 15px;
+						color: $colorWhite;
+						border-radius: 4px;
+						background-color: $colorPrimary;
+					}
+				}
+            }
+
+			ul.contact-info {
+				padding: 0;
+			}
+
+			ul.meta-item {
+				display: flex;
+				list-style: none;
+				padding: 0;
+
+				li.meta-price {
+					display: flex;
+					margin-right: 15px;
+					align-items: center;
+					justify-content: center;
+				}
+
+				ul {
+					padding: 0;
+					display: flex;
+					list-style: none;
+
+					li {
+						margin-right: 0;
+
+						&:after {
+							display: none;
+						}
+
+						a span.favourite-label {
+							display: none;
+						}
+
+						.rtcl-btn,
+						a {
+							width: 40px;
+							height: 40px;
+							border-radius: 3px;
+							color: $colorPrimary;
+							background-color: #fff3f4;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							transition: all .3s ease-in-out;
+							path {
+								fill: $colorPrimary;
+							}
+							&:hover {
+								color: $colorWhite;
+								background-color: $colorPrimary;
+
+								path {
+									fill: #fff;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.rtcl-pswp-item {
+				display: none;
+			}
+
+			.list-group {
+				margin-bottom: 0 !important;
+				.list-group-item {
+					&:last-child {
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
+
+        .rtcl-slider-nav .rtcl-slider-thumb-item img {
+            height: auto;
+        }
+		.owl-carousel .owl-nav [class*=owl-] {
+			background-color: $colorPrimary;
+		}
+
+		.owl-carousel .owl-nav .disabled {
+			color: $colorPrimary;
+			background-color: $colorHPrimary;
+		}
+		.rtcl-qv-price {
+			display: none;
+		}
+	}
+}
+.rtcl-el-slider-wrapper.rtcl-slider-btn-style-1 .rtcl-slider-btn {
+    opacity: 1;
+	z-index: 1;
+    visibility: visible;
+    margin-top: -77px;
+    margin-right: 40px;
+    &.button-right {
+        margin-right: 0;
+    }
+}
+.rtcl-el-slider-wrapper.rtcl-slider-btn-style-1:hover .rtcl-slider-btn:not(.swiper-button-disabled).button-right,
+.rtcl-el-slider-wrapper.rtcl-slider-btn-style-1:hover .rtcl-slider-btn:not(.swiper-button-disabled) {
+    transform: translateY(0%);
+}
+.rtcl-slider-btn-style-1 .rtcl-slider-btn.button-right,
+.rtcl-slider-btn-style-1 .rtcl-slider-btn {
+    transform: translate(0);
+}
+
+.rtcl.rtcl-elementor-widget .rtcl-grid-view.rtcl-style-1-view .rtcl-listing-meta-data {
+	li {
+		i {
+			color: $colorPrimary;
+			margin-right: 7px;
+		}
+		a {
+			i {
+				font-size: 18px;
+				color: $colorPrimary;
+			}
+			color: $colorBody;
+			&:hover {
+				color: $colorPrimary;
+			}
+		}
+	}
+}
+// Phone/website icons sit inside the link, out of reach of the plugin's
+// row gap, and the plugin zeroes their margin. Space them like the other rows.
+.rtcl.rtcl-listings-sc-wrapper.rtcl-elementor-widget .rtcl-listings.rtcl-grid-view.rtcl-style-1-view .rtcl-listing-meta-data li a i {
+	margin-right: var(--rtcl-sc-meta-gap, 7px);
+}
+.rtcl.rtcl-elementor-widget .rtcl-grid-view.rtcl-style-5-view .rtin-bottom .item-img img {
+	width: 40px;
+}
+.rtcl.rtcl-elementor-widget .rtcl-listing-meta-data li {
+	margin-bottom: 10px;
+}
+
+.rtcl-style-2-view {
+	.product-box {
+		.item-img {
+			position: relative;
+			.listing-thumb>a:before {
+				display: none;
+			}
+			.item-info-box {
+				left: 0;
+				bottom: 0;
+				gap: 10px;
+				padding: 10px;
+				position: absolute;
+				display: flex;
+				z-index: 1;
+				align-items: center;
+				.item-poster-info {
+					margin: 0;
+				}
+				.directory-block__poster__thumb {
+					margin: 0;
+					width: 70px;
+					background-image: none;
+				}
+				.rtcl-listing-title {
+					color: $colorWhite;
+					a {
+						color: $colorWhite;
+						&:hover {
+							color: $colorWhite;
+						}
+					}
+				}
+			}
+			&:after {
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				content: '';
+				position: absolute;
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+				opacity: 0.7;
+				border-radius: 12px 12px 0px 0px;
+			}
+		}
+		.rtin-content-area {
+			.item-content {
+				.category {
+					a {
+						gap: 5px;
+						padding: 5px 10px;
+						border-radius: 6px;
+						align-items: center;
+						display: inline-flex;
+						span.clr-icon-r-cat12 {
+							font-size: 12px;
+						}
+					}
+				}
+				.rtcl-listing-meta-data {
+					gap: 7px;
+					margin-top: 15px;
+					li {
+						display: inline-flex;
+						margin-bottom: 10px;
+						i {
+							width: 25px;
+							font-size: 20px;
+							color: $colorPrimary;
+						}
+						a {
+							color: $colorBody;
+							display: inline-flex;
+							&:hover {
+								color: $colorPrimary;
+							}
+						}
+					}
+				}
+				.btn-wrap {
+					margin-top: 20px;
+					padding-top: 20px;
+					border-top: 1px solid $colorLine;
+				}
+			}
+		}
+	}
+}
+
+.rtcl.rtcl-elementor-widget .rtcl-listings .listing-item:hover {
+    box-shadow: 0 0 50px 0 rgba($colorBlack, 0.03%);
+}
+
+/* = Listing Slider Style 2 — keep the theme card design
+ * Classified Listing ships its own redesigned style-2 card (flex column,
+ * floating content panel, reordered items) under selectors that outrank the
+ * theme rules above. This block pins the theme design for the theme's own
+ * `.product-box` template; the leading `body` lets it beat the plugin's
+ * deepest state selectors (`.listing-item.is-featured:hover`).
+=============================================================*/
+body .rtcl.rtcl-listings-sc-wrapper .rtcl-listings.rtcl-grid-view.rtcl-style-2-view .rtcl-widget-listing-item.listing-item.product-box {
+	&,
+	&:hover,
+	&:focus-within {
+		position: static;
+		display: block;
+		margin-bottom: 5px;
+		overflow: visible;
+		background: $colorWhite;
+		border: 1px solid rgba($colorBlack, 0.05);
+		border-radius: 16px;
+		box-shadow: none;
+		transform: none;
+	}
+
+	.item-img {
+		min-height: 0;
+	}
+
+	.listing-thumb {
+		aspect-ratio: auto;
+		background: none;
+		border-radius: 0;
+
+		> a {
+			display: inline-block;
+			width: 100%;
+			height: 280px;
+		}
+
+		img {
+			display: inline;
+			height: 100%;
+			min-height: 0;
+			object-fit: cover;
+			border-radius: 8px 8px 0 0;
+		}
+	}
+
+	&:hover .listing-thumb img {
+		transform: scale(1.1);
+	}
+
+	.listing-title {
+		order: 0;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 1.3;
+		letter-spacing: normal;
+
+		a {
+			color: $colorWhite;
+			letter-spacing: normal;
+		}
+	}
+
+	.rtin-content-area {
+		display: block;
+		flex: 0 1 auto;
+	}
+
+	.item-content {
+		position: static;
+		display: block;
+		z-index: auto;
+		margin: 0;
+		padding: 20px;
+		background: none;
+		border: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+	.category {
+		order: 0;
+		display: block;
+		margin: 3px 0 6px;
+		color: inherit;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 1.3;
+
+		a {
+			display: inline-flex;
+			padding-left: 0;
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 1.3;
+		}
+
+		.rtcl-cat-icon {
+			width: auto;
+		}
+	}
+
+	.rtcl-listing-meta-data {
+		order: 0;
+		align-items: normal;
+		gap: 7px;
+		margin: 15px 0 3px;
+
+		li {
+			max-width: none;
+			margin: 0 5px 10px 0;
+			flex-wrap: nowrap;
+			align-items: normal;
+			gap: 0;
+			overflow: visible;
+			white-space: normal;
+			color: #777;
+			font-size: 15px;
+			line-height: 20px;
+
+			i {
+				margin-right: 5px;
+				color: $colorPrimary;
+				font-size: 20px;
+				line-height: 20px;
+			}
+
+			a {
+				color: $colorBody;
+				font-size: 15px;
+				line-height: 20px;
+
+				&:hover {
+					color: $colorPrimary;
+				}
+			}
+		}
+	}
+
+	.item-price {
+		order: 0;
+		align-self: center;
+		padding: 0;
+		background: none;
+		border-radius: 0;
+
+		.rtcl-price {
+			display: block;
+			color: $colorHeading;
+			font-size: 20px;
+			font-weight: 600;
+			line-height: 20px;
+			letter-spacing: normal;
+		}
+
+		.rtcl-price-amount {
+			display: inline-block;
+			color: inherit;
+			font-weight: 600;
+			line-height: 20px;
+		}
+
+		.rtcl-price-meta {
+			display: none;
+		}
+	}
+}

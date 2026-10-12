@@ -1,0 +1,126 @@
+/*=======================================================================
+= Listing Search
+=========================================================================*/
+.rt-el-listing-cat-box-3 {
+    .rtcl-no-margin {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        display: inline-block;
+        .cat-items-label {
+            color: $colorPrimary;
+            display: inline-block;
+        }
+        .cat-item-wrap {
+            margin: 3px 0;
+            padding: 0 10px;
+            display: inline-block;
+            .rtcl-category-title {
+                margin: 0;
+                font-size: 16px;
+                font-weight: normal;
+                a {
+                    color: $colorWhite;
+                    &:hover {
+                        color: $colorPrimary;
+                    }
+                    position: relative;
+                    &:after {
+                        top: -3px;
+                        right: -5px;
+                        content: ',';
+                        position: absolute;
+                    }
+                }
+            }
+            &:last-child {
+                .rtcl-category-title {
+                    a {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.rtcl.rtcl-categories .cat-item-wrap .cat-details h3 {
+    margin: 0;
+}
+// White count only on the coloured layouts (style 2 head, style 3 hero list);
+// style 1 is a white card and keeps the plugin's count colour.
+.rtcl-categories.rtcl-categories-elementor.rt-el-listing-cat-box-2,
+.rtcl-categories.rtcl-categories-elementor.rt-el-listing-cat-box-3 {
+    .cat-item-wrap .cat-details .views+p,
+    .cat-item-wrap .cat-details .views {
+        color: $colorWhite;
+    }
+}
+// Style 1: count as a light primary pill on the white card.
+.rtcl-categories.rtcl-categories-elementor.rt-el-listing-cat-box-1 .cat-item-wrap .cat-details .views {
+    display: inline-block;
+    // Parent is a flex column, so size the pill to its text and follow the
+    // widget's content alignment instead of stretching across the card.
+    align-self: center;
+    padding: 6px 14px;
+    border-radius: 999px;
+    color: $colorPrimary;
+    line-height: 1.2;
+    background-color: rgba(242, 41, 41, 0.08);
+    background-color: color-mix(in srgb, var(--color-primary) 8%, transparent);
+}
+.rtcl-categories.rtcl-categories-elementor.rt-el-listing-cat-box-1 {
+    &.cat-box-left-alignment .cat-item-wrap .cat-details .views {
+        align-self: flex-start;
+    }
+    &.cat-box-right-alignment .cat-item-wrap .cat-details .views {
+        align-self: flex-end;
+    }
+}
+/* = Categories Slider Style 2 Override 
+=============================================================*/
+.rtcl-categories-elementor {
+    &.rt-el-listing-cat-box-2 {
+        .cat-item-wrap {
+            .cat-details {
+                border: none;
+                .icon {
+                    width: 60px;
+                    height: 60px;
+                    padding: 10px;
+                    margin-bottom: 5px;
+                    border-radius: 100%;
+                    display: inline-block;
+                    background-color: $colorWhite;
+                }
+                .rtin-head-area {
+                    display: block;
+                    border: none;
+                    text-align: center;
+                    color: $colorWhite;
+                    border-radius: 12px;
+                    padding: 30px;
+                    background-color: #27CCAB;
+                }
+                .box-body {
+                    border: 1px solid #eaf3ff;
+                    .rtin-sub-cats {
+                        margin: 0;
+                    }
+                }
+                h3 {
+                    a {
+                        color: $colorWhite;
+                        &:hover {
+                            color: $colorWhite;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .rtcl-slider-pagination .swiper-pagination-bullet {
+        background-color: $colorPrimary;
+    }
+}

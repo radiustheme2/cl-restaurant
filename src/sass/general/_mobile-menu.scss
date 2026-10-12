@@ -1,0 +1,315 @@
+/*=======================================================================
+= Mobile Menu
+=========================================================================*/
+@media screen and (max-width: 1024px) {
+   header.site-header {
+      display: none;
+   }
+   
+}
+@media only screen and (min-width: 1025px) {
+   #meanmenu {
+      display: none;
+   }
+}
+.rt-mobile-menu.mean-container {
+   top: 0;
+   z-index: 9;
+   display: none;
+   position: sticky;
+   transition: $transition;
+   background-color: $colorWhite;
+   border-bottom: 1px solid rgba(181, 181, 181, 0.3);
+   @media only screen and (max-width: 1024px) {
+      display: block;
+   }
+   .container {
+      position: relative;
+   }
+}
+.admin-bar {
+   .rt-mobile-menu.mean-container {
+      top: 32px;
+      @media only screen and (max-width: 782px) {
+         top: 45px;
+      }
+   }
+   &.mn-top {
+      .rt-mobile-menu.mean-container {
+         @media only screen and (max-width: 600px) {
+            top: 0;
+         }
+      }
+   }
+}
+.mean-bar {
+   display: flex;
+   padding: 5px 0;
+   align-items: center;
+   justify-content: space-between;
+}
+.rt-slide-nav {
+   left: 0;
+   top: 68px;
+   width: 100%;
+   z-index: 99;
+   display: none;
+   overflow-y: auto;
+   position: absolute;
+   background-color: $colorWhite;
+   max-height: calc(100vh - 100px);
+   box-shadow: 0px 0px 10px 0px #0000001c;
+}
+
+.rt-slide-nav ul {
+   padding: 0;
+   margin: 0px;
+   list-style-type: none;
+   ul {
+      border-top: 1px solid #dfe7ff;
+   }
+}
+
+body .sidebarBtn {
+   display: block;
+   cursor: pointer;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+
+body .sidebarBtn .bar {
+   background: $colorWhite;
+   height: 2px;
+   width: 25px;
+   display: block;
+   margin-bottom: 5px;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+
+.white-bg {
+   .sidebarBtn .bar {
+      background: $colorBlack;
+   }
+}
+
+body .sidebarBtn .bar:last-child {
+   margin-bottom: 0;
+}
+
+body.slidemenuon .sidebarBtn .bar:nth-child(2) {
+   opacity: 0;
+}
+
+body.slidemenuon .sidebarBtn .bar:nth-child(1) {
+   -webkit-transform: rotate(45deg) translate(0, 7px);
+   -ms-transform: rotate(45deg) translate(0, 7px);
+   transform: rotate(45deg) translate(0, 7px);
+}
+
+body.slidemenuon .sidebarBtn .bar:nth-child(3) {
+   -webkit-transform: rotate(-45deg) translate(3px, -10px);
+   -ms-transform: rotate(-45deg) translate(3px, -10px);
+   transform: rotate(-45deg) translate(3px, -10px);
+}
+
+.offscreen-navigation .children,
+.offscreen-navigation .sub-menu {
+   display: none;
+}
+
+.offscreen-navigation ul li {
+   margin: 0;
+   position: relative;
+   border-bottom: 1px solid #fde5e5;
+
+   &:last-child {
+      border: none;
+   }
+}
+
+.offscreen-navigation li>a {
+   display: block;
+   position: relative;
+   color: #000000;
+   font-size: 14px;
+   font-weight: 500;
+   background: #fff;
+   padding-bottom: 7px;
+   padding-top: 7px;
+}
+
+.offscreen-navigation li>a:hover {
+   background-color: #fff5f5;
+}
+
+.offscreen-navigation ul>li>a {
+   padding-left: 15px;
+}
+
+.offscreen-navigation ul ul>li>a {
+   padding-left: 30px;
+}
+
+.offscreen-navigation ul ul ul>li>a {
+   padding-left: 45px;
+}
+
+.offscreen-navigation .children li>a,
+.offscreen-navigation .sub-menu li>a {
+   font-size: 13px;
+}
+
+.offscreen-navigation li.menu-item-has-children>span,
+.offscreen-navigation li.page_item_has_children>span {
+   top: 0;
+   right: 0;
+   width: 40px;
+   height: 40px;
+   z-index: 99999;
+   position: absolute;
+   display: inline-block;
+}
+
+.offscreen-navigation li.menu-item-has-children>span:before,
+.offscreen-navigation li.page_item_has_children>span:before {
+   top: 7px;
+   right: 10px;
+   display: none;
+   font-size: 12px;
+   transition: .1s;
+   font-size: 16px;
+   content: '\f068';
+   font-weight: 700;
+   position: absolute;
+   font-family: "Font Awesome 6 Free";
+}
+
+.offscreen-navigation li.menu-item-has-children>span:after,
+.offscreen-navigation li.page_item_has_children>span:after {
+   top: 10px;
+   right: 12px;
+   font-size: 12px;
+   transition: .1s;
+   font-weight: 700;
+   content: '\2b';
+   position: absolute;
+   display: inline-block;
+   font-family: "Font Awesome 6 Free";
+}
+
+.offscreen-navigation li.menu-item-has-children>span.open,
+.offscreen-navigation li.page_item_has_children>span.open {
+   &::before {
+      display: block;
+   }
+   &::after {
+      display: none;
+   }
+}
+
+/* = Humbarger Menu 
+=========================================*/
+.humbarger-menu {
+   .nav-icon {
+      width: 30px;
+   }
+
+   .nav-icon:after,
+   .nav-icon:before,
+   .nav-icon div {
+      background-color: $colorWhite;
+      border-radius: 3px;
+      content: '';
+      display: block;
+      height: 2px;
+      margin: 7px 0;
+      @include transitionSmooth;
+   }
+}
+
+.humbarger-menu {
+   cursor: pointer;
+
+   @include respond-above(mmd) {
+      display: block;
+   }
+}
+
+.headerBurgerMenu {
+   $self: &;
+   display: none;
+   padding-left: 5px;
+
+   @include respond-below(mmd) {
+      display: block;
+   }
+
+   &__button {
+      background-color: transparent;
+      border: 1px solid transparent;
+   }
+
+   &__button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      padding: 0;
+   }
+
+   .line {
+      fill: none;
+      stroke: $colorBlack;
+      stroke-width: 4;
+      transition: $transition;
+      transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+   }
+
+   .line1 {
+      stroke-dasharray: 60 207;
+   }
+
+   .line2 {
+      stroke-dasharray: 40 60;
+   }
+
+   .line3 {
+      stroke-dasharray: 60 207;
+   }
+
+   .menu-status-close,
+   .sidebarBtn.opened {
+      .line1 {
+         stroke-dasharray: 90 207;
+         stroke-dashoffset: -134;
+      }
+
+      .line2 {
+         stroke-dasharray: 1 60;
+         stroke-dashoffset: -30;
+      }
+
+      .line3 {
+         stroke-dasharray: 90 207;
+         stroke-dashoffset: -134;
+      }
+   }
+}
+div#mobile-sticky-placeholder {
+   display: none;
+   @media screen and (max-width: 1024px) {
+      display: block;
+   }
+}
+.sticky-header .mobile-sticky {
+   top: 0;
+   width: 100%;
+   z-index: 99;
+   position: fixed;
+   animation-name: fadeInDown;
+   animation-duration: 1s;
+   animation-fill-mode: both;
+   animation-delay: 0s;
+}

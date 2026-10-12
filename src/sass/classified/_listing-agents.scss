@@ -1,0 +1,370 @@
+
+/*=======================================================================
+= Listing agent archive page
+=========================================================================*/
+.post-type-archive-rtcl_agent .content-area,
+.single-rtcl_agent .content-area {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+@media (max-width: 991px) {
+
+    .post-type-archive-rtcl_agent .content-area,
+    .single-rtcl_agent .content-area {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+/* = Agent
+=========================================*/
+.agent-holder {
+    z-index: 0;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    padding-top: 100px;
+    text-align: center;
+    border-radius: 10px;
+    align-items: end;
+    justify-content: center;
+    background-color: #F5F6F7;
+}
+
+.agent-holder .shape2,
+.agent-holder .shape1 {
+    right: -115px;
+    bottom: -60px;
+    z-index: -1;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    background-color: #d5dde5;
+    transform: rotate(314deg);
+}
+
+.agent-holder .shape2 {
+    width: 165%;
+    bottom: 65px;
+    right: -220px;
+    background-color: #e1e6ec;
+}
+
+.agent-holder .item-title {
+    top: 20px;
+    left: 20px;
+    text-align: left;
+    padding-left: 15px;
+    position: absolute;
+    padding-right: 60px;
+}
+
+.agent-holder .item-title .agent-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.agent-holder .item-title .agent-name a {
+    color: var(--color-heading);
+}
+
+.agent-holder .item-title .agency-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.agent-holder .item-title .agency-name a {
+    color: var(--color-body);
+}
+
+.agent-holder .item-title:before {
+    top: 5px;
+    left: 0;
+    width: 4px;
+    content: '';
+    height: 80%;
+    display: block;
+    border-radius: 50px;
+    position: absolute;
+    background-color: var(--color-primary);
+}
+
+.agent-holder .listing-count {
+    left: 30px;
+    bottom: 30px;
+    padding: 5px 15px;
+    position: absolute;
+    color: #fff;
+    border-radius: 4px;
+    background-color: var(--color-primary);
+}
+
+.agent-holder .listing-count i {
+    margin-right: 3px;
+}
+
+.agent-holder .item-socials {
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    height: 40px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+.agent-holder .item-socials span {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.agent-holder .item-socials span:hover {
+    color: #fff;
+    background-color: var(--color-primary);
+}
+
+.agent-holder .item-socials ul {
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    flex-flow: column;
+}
+
+.agent-holder .item-socials ul li {
+    opacity: 0;
+    transform: translateY(15px);
+    backface-visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.agent-holder .item-socials ul li a {
+    gap: 10px;
+    width: 40px;
+    height: 40px;
+    color: var(--color-body);
+    border-radius: 50px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.agent-holder .item-socials ul li a .rtcl-icon-twitter {
+    background-color: var(--color-body);
+}
+
+.agent-holder .item-socials ul li a:hover {
+    color: #fff;
+    background-color: var(--color-primary);
+}
+
+.agent-holder .item-socials ul li a:hover .rtcl-icon-twitter {
+    background-color: var(--color-white);
+}
+
+.agent-holder .item-socials ul li a i.rtcl-icon.rtcl-icon-pinterest {
+    height: 23px;
+}
+
+.agent-holder .item-socials ul li:nth-child(1) {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.agent-holder .item-socials ul li:nth-child(2) {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.agent-holder .item-socials ul li:nth-child(3) {
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.agent-holder .item-socials ul li:nth-child(4) {
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.agent-holder .item-socials ul li:nth-child(5) {
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.agent-holder .item-socials:hover {
+    height: 350px;
+    overflow: visible;
+}
+
+.agent-holder .item-socials:hover ul li {
+    opacity: 1;
+    transform: translateY(0);
+    backface-visibility: visible;
+}
+
+.el-agents .agent-holder {
+    margin-bottom: 0;
+}
+
+/*=======================================================================
+= Listing agent details page
+=========================================================================*/
+.rtcl-agent-single-wrapper .agent-email-area,
+.rtcl-agent-single-wrapper .rtcl-agent-info {
+    padding: 25px 30px 30px 30px;
+    margin-top: 30px;
+    border-radius: 8px;
+    border: 1px solid #E0E3E7;
+    background-color: #fff;
+}
+
+.rtcl-agent-single-wrapper .agent-email-area h3,
+.rtcl-agent-single-wrapper .rtcl-agent-info h3 {
+    padding: 0;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: var(--color-heading);
+    padding-bottom: 10px;
+}
+
+.rtcl-agent-single-wrapper .agent-email-area .rtcl-agent-meta ul,
+.rtcl-agent-single-wrapper .rtcl-agent-info .rtcl-agent-meta ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rtcl-agent-single-wrapper .agent-email-area .rtcl-agent-meta ul li,
+.rtcl-agent-single-wrapper .rtcl-agent-info .rtcl-agent-meta ul li {
+    gap: 10px;
+    display: flex;
+    padding: 12px 0;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid #E0E3E7;
+}
+
+.rtcl-agent-single-wrapper .agent-email-area .rtcl-agent-meta ul li:last-child,
+.rtcl-agent-single-wrapper .rtcl-agent-info .rtcl-agent-meta ul li:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+
+.rtcl-agent-single-wrapper .agent-email-area .rtcl-agent-meta ul li a,
+.rtcl-agent-single-wrapper .rtcl-agent-info .rtcl-agent-meta ul li a {
+    color: var(--color-body);
+}
+
+.rtcl-agent-single-wrapper .agent-email-area .rtcl-agent-meta ul li a:hover,
+.rtcl-agent-single-wrapper .rtcl-agent-info .rtcl-agent-meta ul li a:hover {
+    color: var(--color-primary);
+}
+
+.rtcl-agent-single-wrapper .agent-email-area .rtcl-agent-meta ul li i.rtcl-icon-whatsapp,
+.rtcl-agent-single-wrapper .rtcl-agent-info .rtcl-agent-meta ul li i.rtcl-icon-whatsapp {
+    font-size: 16px;
+}
+
+.rtcl-agent-single-wrapper .agent-email-area .rtcl-agent-meta ul li i.rtcl-icon-whatsapp:before,
+.rtcl-agent-single-wrapper .rtcl-agent-info .rtcl-agent-meta ul li i.rtcl-icon-whatsapp:before {
+    margin: 0;
+}
+
+.rtcl-agent-single-wrapper .agent-email-area .rtcl-agent-meta ul li i.rt-custom-icon-phone,
+.rtcl-agent-single-wrapper .rtcl-agent-info .rtcl-agent-meta ul li i.rt-custom-icon-phone {
+    font-size: 18px;
+}
+
+.rtcl-agent-single-wrapper .agent-email-area .rtcl-agent-meta ul li i.rt-custom-icon-email-icon,
+.rtcl-agent-single-wrapper .rtcl-agent-info .rtcl-agent-meta ul li i.rt-custom-icon-email-icon {
+    font-size: 11px;
+}
+
+.rtcl-agent-single-wrapper .agent-email-area .rtcl-agent-meta ul li i.demo-icon.rt-custom-icon-glob,
+.rtcl-agent-single-wrapper .rtcl-agent-info .rtcl-agent-meta ul li i.demo-icon.rt-custom-icon-glob {
+    font-size: 18px;
+    margin-left: -2px;
+}
+
+.rtcl-agent-single-wrapper .agent-email-area form {
+    padding: 0;
+    margin-top: 15px;
+}
+
+.rtcl-agent-single-wrapper .agent-email-area form .form-group {
+    margin-bottom: 15px;
+}
+
+.rtcl-agent-single-wrapper .agent-email-area form .form-group .form-control {
+    border-color: #E0E3E7;
+}
+
+.rtcl-agent-single-wrapper .agent-email-area form .form-group textarea.form-control {
+    height: 100px;
+}
+
+.rtcl-agent-single-wrapper .agent-email-area form .btn {
+    width: 100%;
+    height: 50px;
+}
+
+.rtcl-agent-single-wrapper .agent-email-area .rtcl-response {
+    margin-top: 5px;
+}
+
+.rtcl-agent-single-wrapper .rtcl-agent-listing-list {
+    margin-top: 0;
+}
+
+@media (max-width: 1199px) {
+    .rtcl-agent-single-wrapper .rtcl-agent-listing-list {
+        margin-bottom: 80px;
+    }
+}
+
+.rtcl-agent-single-wrapper .rtcl-agent-listing-list>ul {
+    gap: 15px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    border: 1px solid #E0E3E7;
+    background-color: #fff;
+}
+
+.rtcl-agent-single-wrapper .rtcl-agent-listing-list>ul li {
+    display: inline-flex;
+}
+
+.rtcl-agent-single-wrapper .rtcl-agent-listing-list>ul li a {
+    margin: 0;
+    font-weight: 500;
+    padding: 10px 20px;
+    background-color: transparent;
+}
+
+.rtcl-agent-single-wrapper .rtcl-agent-listing-list>ul li:hover a,
+.rtcl-agent-single-wrapper .rtcl-agent-listing-list>ul li.active a {
+    border-radius: 4px;
+    color: #fff;
+    background-color: var(--color-primary);
+}
+
+.rtcl-agent-single-wrapper .rtcl-agent-listing-list .rtcl-listings .listing-item {
+    border: 1px solid #E0E3E7;
+}

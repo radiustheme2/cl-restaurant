@@ -1,0 +1,432 @@
+/*=======================================================================
+= Listing Search
+=========================================================================*/
+.cl-restaurant-search-form {
+    .cl-restaurant-listing-search-form {
+        width: 100%;
+
+        .inner-form-wrap {
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: space-between;
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                display: inline-block;
+            }
+
+            .search-location,
+            .search-cats,
+            .btn-wrap {
+                width: 100%;
+                margin-right: 15px;
+                position: relative;
+            }
+
+            .search-location,
+            .search-cats {
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 15px;
+                    border-radius: 100px;
+                    border: 1px solid #e8e8e8;
+                }
+            }
+
+            .rtcl-search-input-button.rtin-keyword {
+                padding: 12px 15px 12px 25px;
+
+                @media screen and (max-width: 767px) {
+                    border: 1px solid #e8e8e8;
+                    margin-bottom: 15px;
+                    border-radius: 100px;
+                    padding: 10px 15px 10px 25px;
+                }
+            }
+
+            .search-cats {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        border: none;
+        padding-left: 0;
+        color: $colorBody;
+        line-height: 45px !important;
+    }
+
+    .select2-container--classic.select2-container--open .select2-dropdown {
+        border-color: $colorPrimary;
+    }
+
+    &.search-form-1 {
+        .cl-restaurant-listing-search-form {
+            .inner-form-wrap {
+
+                .search-location,
+                .search-cats,
+                .btn-wrap {
+                    width: 100%;
+                    margin-right: 0;
+                    margin-left: 15px;
+                    position: relative;
+                    @include respond-below(md){
+                        margin-left: 0;
+                    }
+                }
+
+                .btn-wrap {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.rtcl-search-input-button {
+    cursor: pointer;
+    font-size: 15px;
+    position: relative;
+    border-radius: 4px;
+    padding: 5px 10px 5px 5px;
+
+    @media screen and (max-width: 767px) {
+        padding: 5px 10px 5px 30px;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 5px 10px 5px 20px;
+    }
+
+    input {
+        width: 100%;
+        border: none;
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+}
+
+.rtcl-search-input-button.rtin-location {
+    display: flex;
+    align-items: center;
+
+    .form-control {
+        height: auto;
+        padding: 0;
+    }
+}
+
+.rtcl-search-input-button.rtin-category {
+    background-size: 16px;
+}
+
+.rtin-btn-holder {
+    width: 35%;
+    height: 100%;
+
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        text-align: center;
+    }
+
+    .rtin-search-btn {
+        gap: 10px;
+        height: 100%;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        color: $colorWhite;
+        padding: 15px 40px;
+        margin-right: -1.5px;
+        position: relative;
+        display: inline-flex;
+        border-radius: 8px;
+        background-color: $colorPrimary;
+
+        img {
+            width: 25px;
+            padding-top: 2px;
+            margin-left: 10px;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        &:hover {
+            background-color: $colorHPrimary;
+        }
+    }
+}
+
+.rtcl-terms {
+    width: 100%;
+    position: relative;
+}
+
+.rtcl-child-terms {
+    top: 100%;
+    width: 80%;
+    z-index: 9;
+    position: absolute;
+    height: min(50px, 100px);
+    background-color: #fff;
+    border-top: 1px solid #eceef0;
+
+    .select2-hidden-accessible {
+        border: 0 !important;
+        clip: unset !important;
+        clip-path: unset !important;
+        height: 100% !important;
+        overflow: hidden !important;
+        padding: 0 15px !important;
+        position: absolute !important;
+        width: 100% !important;
+        white-space: nowrap !important;
+    }
+
+    option {
+        padding: 5px;
+    }
+
+    span.rtcl-icon-spinner.animate-spin {
+        z-index: 1;
+        width: 100%;
+        padding-left: 10px;
+    }
+}
+
+.price-btn-items {
+    .price-item {
+        border-radius: 100px;
+        border: 1px solid #e8e8e8;
+
+        .form-control {
+            height: 55px;
+            border: none;
+            border-radius: 100px;
+            padding: 12px 15px 12px 25px;
+        }
+    }
+}
+
+.search-form-1 {
+    .inner-form-wrap {
+        border-radius: 8px;
+        background-color: #fff;
+
+        @media screen and (max-width: 767px) {
+            border-radius: 10px;
+        }
+
+        @media screen and (max-width: 767px) {
+            padding: 30px;
+        }
+
+        .rtin-keyword {
+            span.rtcl-icon-spinner.animate-spin {
+                top: 0;
+                left: 10px;
+                padding-top: 0;
+                border-radius: 100px;
+            }
+        }
+
+        .search-location,
+        .search-cats,
+        .btn-wrap {
+            &:after {
+                top: 50%;
+                right: 0;
+                width: 1px;
+                content: '';
+                height: 20px;
+                margin-top: -10px;
+                position: absolute;
+                display: inline-block;
+                background-color: #d8d8d8;
+
+                @media screen and (max-width: 767px) {
+                    display: none;
+                }
+            }
+        }
+
+        .rtin-btn-holder ~ .search-location:after {
+            display: none;
+        }
+
+        .rtcl-search-input-button {
+            gap: 10px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .select2-container .select2-selection--single {
+        border-color: transparent !important;
+        background-color: transparent !important;
+
+        .select2-selection__arrow {
+            right: 5px;
+        }
+    }
+}
+
+.search-form-2 {
+    .rtcl-search-input-button {
+        gap: 10px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        padding: 5px 10px 5px 25px;
+    }
+    .inner-form-wrap {
+        width: 100%;
+        display: inline-block;
+        .rtin-keyword {
+            span.rtcl-icon-spinner.animate-spin {
+                top: 0;
+                left: 10px;
+                padding-top: 0;
+                border-radius: 100px;
+            }
+        }
+        .search-location,
+        .rtin-keyword,
+        .search-cats {
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 20px;
+            border-radius: 100px;
+            border: 1px solid #e8e8e8;
+            background-color: $colorWhite;
+        }
+    }
+    .rtin-btn-holder {
+        width: 100%;
+        .rtin-search-btn {
+            width: 100%;
+            align-items: center;
+            border-radius: 100px;
+            justify-content: center;
+        }
+    }
+    .select2-container .select2-selection--single {
+        border-color: transparent !important;
+        background-color: transparent !important;
+
+        .select2-selection__arrow {
+            right: 5px;
+        }
+    }
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        padding-left: 0;
+    }
+    //     .search-location,
+    //     .rtin-keyword,
+    //     .search-cats {
+    //         margin-left: 0;
+    //         margin-right: 0;
+    //         margin-bottom: 20px;
+    //         border-radius: 100px;
+    //         border: 1px solid #e8e8e8;
+    //         background-color: $colorWhite;
+    //         &:after {
+    //             display: none !important;
+    //         }
+    //     }
+
+    //     .rtcl-search-input-button {
+    //         padding: 5px 10px 5px 50px;
+            
+    //         &.rtin-location,
+    //         &.rtin-category {
+    //             background-position: 25px;
+    //         }
+    //     }
+
+    //     .rtin-btn-holder {
+    //         width: 100%;
+
+    //         .rtin-search-btn {
+    //             width: 100%;
+    //             justify-content: center;
+    //         }
+    //     }
+    // }
+
+    // &.rtin-style-popup {
+    //     .inner-form-wrap {
+    //         .rtcl-search-input-button {
+
+    //             &.rtin-location,
+    //             &.rtin-category {
+    //                 padding: 13px 10px 13px 50px;
+    //             }
+    //         }
+    //     }
+    // }
+
+    // .location-category-item,
+    // .d-flex-items {
+    //     gap: 20px;
+    //     display: flex;
+
+    //     @media only screen and (max-width: 480px) {
+    //         display: unset;
+    //     }
+
+    //     .d-flex-item {
+    //         width: 100%;
+    //     }
+    // }
+}
+
+.select2-results {
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, .15);
+}
+
+.line-title {
+    font-size: 48px;
+    line-height: 1.3;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+    @media screen and (max-width: 1024px) {
+        font-size: 42px;
+    }
+    @media screen and (max-width: 575px) {
+        font-size: 36px;
+    }
+    span.line {
+        z-index: 0;
+        font-weight: 700;
+        position: relative;
+        display: inline-block;
+        img {
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            position: absolute;
+        }
+    }
+    &.line-title-2 {
+        text-align: left;
+        @media screen and (max-width: 767px) {
+            text-align: center;
+        }
+        img {
+            left: 0;
+            bottom: -3px;
+        }
+    }
+}

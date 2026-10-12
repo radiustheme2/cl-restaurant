@@ -1,0 +1,547 @@
+/*=======================================================================
+= Listing my account page
+=========================================================================*/
+body.rtcl-account:not(.page-template-rtcl-canvas_template) .rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.is-active, 
+body.rtcl-account:not(.page-template-rtcl-canvas_template) .rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li:hover {
+    background: transparent;
+}
+// The plugin draws its own cards inside the content area; no outer box here.
+body.rtcl-account:not(.page-template-rtcl-canvas_template) .rtcl-MyAccount-wrap .rtcl-MyAccount-content {
+	padding: 0;
+	background-color: transparent;
+}
+
+.rtcl-MyAccount-wrap {
+	gap: 30px;
+	display: flex;
+	box-shadow: none;
+	background-color: transparent;
+	@include respond-below (md) {
+		flex-flow: column;
+	}
+	.rtcl-MyAccount-navigation {
+		flex: 260px 0 0;
+		max-width: 260px;
+		align-self: baseline;
+		background-color: transparent;
+		@include respond-below (md) {
+			flex: unset;
+			max-width: unset;
+		}
+		ul {
+			gap: 1px;
+			display: flex;
+			padding: 0;
+			flex-direction: column;
+			@include respond-below (md) {
+				display: inline-block;
+			}
+			li {
+				border: none;
+				&:hover {
+					background: unset;
+				}
+				a {
+					width: 100%;
+					color: #838383;
+					font-weight: 400;
+					position: relative;
+					border-radius: 6px;
+					display: flex;
+					align-items: center;
+					@include respond-below (md) {
+						font-size: 14px;
+						padding: 10px 12px;
+					}
+					&:before {
+						top: 15px;
+						left: 0;
+						content: '';
+						width: 18px;
+						height: 18px;
+						margin-right: 8px;
+						display: inline-block;
+						background-color: #838383 !important;
+						background-repeat: no-repeat;
+						transition: $transition;
+					}
+					&:hover {
+						color: $colorWhite;
+						background-color: $colorPrimary;
+						&:before {
+							background-color: $colorWhite !important;
+						}
+					}
+				}
+				&.is-active {
+					background: transparent;
+					span.rtcl-unread-badge {
+						color: $colorPrimary;
+						background-color: $colorWhite !important;
+					}
+					a {
+						color: $colorWhite;
+						background-color: $colorPrimary;
+						&:before {
+							background-color: $colorWhite !important;
+						}
+					}
+				}
+
+				&.rtcl-MyAccount-navigation-link {
+					&--dashboard {
+						a {
+							&:before {
+								-webkit-mask-image: url("../img/theme/myaccount/dashboard.svg") !important;
+								mask-image: url("../img/theme/myaccount/dashboard.svg") !important;
+							}
+						}
+					}
+					&--listings {
+						a {
+							&:before {
+								-webkit-mask-image: url("../img/theme/myaccount/listing.svg") !important;
+								mask-image: url("../img/theme/myaccount/listing.svg") !important;
+							}
+						}
+					}
+					&--favourites {
+						a {
+							&:before {
+								-webkit-mask-image: url("../img/theme/myaccount/heart.svg") !important;
+								mask-image: url("../img/theme/myaccount/heart.svg") !important;
+							}
+						}
+					}
+					&--chat {
+						a {
+							&:before {
+								-webkit-mask-image: url("../img/theme/myaccount/chat.svg") !important;
+								mask-image: url("../img/theme/myaccount/chat.svg") !important;
+							}
+						}
+					}
+					&--payments {
+						a {
+							&:before {
+								-webkit-mask-image: url("../img/theme/myaccount/payment.svg") !important;
+								mask-image: url("../img/theme/myaccount/payment.svg") !important;
+							}
+						}
+					}
+					&--edit-account {
+						a {
+							&:before {
+								-webkit-mask-image: url("../img/theme/myaccount/user.svg") !important;
+								mask-image: url("../img/theme/myaccount/user.svg") !important;
+							}
+						}
+					}
+					&--my-bookings {
+						a {
+							&:before {
+								-webkit-mask-image: url("../img/theme/myaccount/booking.svg") !important;
+								mask-image: url("../img/theme/myaccount/booking.svg") !important;
+							}
+						}
+					}
+					&--all-bookings {
+						a {
+							&:before {
+								-webkit-mask-image: url("../img/theme/myaccount/booking-all.svg") !important;
+								mask-image: url("../img/theme/myaccount/booking-all.svg") !important;
+							}
+						}
+					}
+					&--my-documents {
+						a {
+							&:before {
+								-webkit-mask-image: url("../img/theme/myaccount/documentation.svg") !important;
+								mask-image: url("../img/theme/myaccount/documentation.svg") !important;
+							}
+						}
+					}
+					&--logout {
+						a {
+							&:before {
+								-webkit-mask-image: url("../img/theme/myaccount/logout.svg") !important;
+								mask-image: url("../img/theme/myaccount/logout.svg") !important;
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+	
+	.rtcl-MyAccount-content {
+		width: 100%;
+		.rtcl .rtcl-list-view {
+			.listing-item {
+				display: block;
+				border: 1px solid $colorLine;
+				.product-box .rtcl-listable {
+					padding: 0;
+					.rtcl-listable-item {
+						@media only screen and (max-width: 480px) {
+							flex-flow: column;
+						}
+					}
+				}
+			}
+		}
+		.product-box .meta-item {
+			@media only screen and (max-width: 375px) {
+				flex-flow: column;
+			}
+		}
+		.form-group {
+			margin-bottom: 15px;
+		}
+		.listing-search-wrapper {
+			gap: 30px;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 20px !important;
+			@include respond-below (sm) {
+				gap: 15px;
+				flex-flow: column-reverse;
+			}
+			.form-control {
+				width: 100%;
+				height: 50px;
+			}
+			.float-sm-left {
+				width: 50%;
+				@include respond-below (sm) {
+					width: 100%;
+				}
+				form.form-inline {
+					display: flex;
+					position: relative;
+					.btn {
+						top: 0;
+						right: 0;
+						height: 100%;
+						display: flex;
+						position: absolute;
+						align-items: center;
+						background-color: transparent;
+						i {
+							color: $colorBody;
+						}
+						&:focus {
+							outline: none;
+							box-shadow: none;
+						}
+					}
+				}
+			}
+			.float-sm-right {
+				a {
+					height: 50px;
+					display: flex;
+					padding: 0 20px;
+					align-items: center;
+					svg {
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+		.form-check .form-check-input {
+			margin-top: 7px;
+		}
+		.rtcl-listings.manage-listing .action-wrap .btn {
+			color: $colorWhite;
+			background-color: $colorPrimary;
+		}
+		.rtcl .rtcl-list-view .product-box {
+			margin: 0;
+			padding: 15px;
+		}
+		//Dashboard Tab
+		.media-body {
+			margin-top: 10px;
+		}
+		.my-listing-actions {
+			display: flex;
+			margin: 10px 15px;
+			margin-top: 0;
+			padding-bottom: 10px;
+			align-items: center;
+			justify-content: space-between;
+			@media only screen and (max-width: 575px) {
+				flex-flow: column;
+			}
+			.list-expires-wrap {
+				gap: 20px;
+				display: flex;
+				font-size: 15px;
+				align-items: center;
+				p {
+					margin-bottom: 0;
+				}
+				@media only screen and (max-width: 375px) {
+					gap: 0px;
+					flex-flow: column;
+					align-items: flex-start;
+					p {
+						line-height: 1.5;
+						padding-bottom: 5px;
+					}				
+				}
+			}
+			.rtcl-actions {
+				@media only screen and (max-width: 375px) {
+					margin-top: 5px;
+				}
+				a {
+					color: $colorWhite;
+					border: none;
+					padding: 5px 10px;
+					margin: 0 0 0 5px;
+					background-color: #00AF41;
+					@media only screen and (max-width: 575px) {
+						margin: 0;
+					}
+					svg path {
+						fill: $colorWhite;
+					}
+					&:active,
+					&:hover,
+					&:focus {
+						background-color: #2b9f56;
+					}
+					&:hover {
+						color: $colorWhite;
+					}
+					&.rtcl-edit-listing {
+						background-color: #008DDE;
+						&:active,
+						&:hover,
+						&:focus {
+							color: $colorWhite;
+							background-color: #0081cb;
+						}
+					}
+					&.rtcl-delete-listing {
+						background-color: #FF3C48;
+						&:active,
+						&:hover,
+						&:focus {
+							color: $colorWhite;
+							background-color: #cd202a;
+						}
+					}
+					&.mark-as-sold {
+						background-color: #FF8C21;
+						&:active,
+						&:hover,
+						&:focus {
+							color: $colorWhite;
+							background-color: #df7411;
+						}
+					}
+				}
+			}
+		}
+		.rtcl-payment-history-wrap {
+			thead>tr {
+				th {
+					border-bottom-color: #dedede;
+				}
+			}
+			tbody {
+				a {
+					color: $colorPrimary;
+					&:hover {
+						color: $colorHPrimary;
+					}
+				}
+			}
+		}
+	}
+	.rtcl-my-booking-wrap {
+		.booking-listing-title span {
+			background: $colorPrimary;
+		}
+	}
+}
+div#rtcl-user-chat-wrap .rtcl-loading {
+    padding-top: 15px;
+    padding-left: 25px;
+}
+.page-template-my-account .rtcl #rtcl-user-login-wrapper {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.have-registration-form {
+	width: auto !important;
+	justify-content: center;
+	max-width: 900px !important;
+	margin: 100px auto !important;
+	@media screen and (max-width: 550px) {
+		margin: 80px 20px !important;
+	}
+}
+
+.separate-registration-form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent !important;
+
+	.rtcl-login-form-wrap {
+		padding: 30px;
+		flex-flow: column;
+		display: inline-flex;
+		background-color: $colorWhite;
+	}
+
+	.rtcl-form-group.rtcl-login-form-submit-wrap {
+		align-items: center;
+		justify-content: center;
+		.form-check {
+			margin-bottom: 0;
+		}
+		label {
+			margin: 0;
+		}
+	}
+}
+
+.rtcl-user-registration-wrapper {
+	display: flex;
+	margin: 0 !important;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent !important;
+	.rtcl-registration-form-wrap {
+		padding: 30px;
+		flex-flow: column;
+		display: inline-flex;
+		background-color: $colorWhite;
+	}
+}
+
+.registration-disable {
+    margin: 0 auto;
+    max-width: 500px;
+    border-radius: 12px;
+}
+
+.registration-enable {
+    display: flex;
+	border-radius: 12px;
+	@include respond-below(md){
+		width: 100%;
+		display: inline-block;
+		.rtcl-registration-form-wrap {
+			margin-top: 30px;
+		}
+	}
+}
+.rtcl-account {
+	.breadcrumbs-banner {
+		display: none;
+	}
+	.content-area {
+		background-image: url(../img/theme/myaccount/account-bg.png);
+		background-size: contain;
+	}
+}
+.rtcl {
+	.form-control {
+		&:focus {
+			border-color: $colorPrimary;
+		}
+	}
+}
+
+.rtcl .rtcl-post-section .form-group {
+    margin-bottom: 5px;
+}
+
+.rtcl .btn-success {
+	border-color: $colorPrimary;
+	background-color: $colorPrimary;
+}
+
+/* = Dashboard = */
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation {
+	background-color: $colorWhite !important;
+}
+.rtcl-MyAccount-wrap {
+	.rtcl-MyAccount-navigation {
+		background-color: #1d2327;
+		flex: 0 0 300px;
+		max-width: 300px;
+		flex-flow: column;
+	}
+}
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-content .rtcl-payment-history-wrap,
+.rtcl-chat-content-wrapper {
+	padding: 30px;
+	border-radius: 6px;
+	background-color: $colorWhite;
+}
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-content .rtcl-user-info .rtcl-user-content {
+	flex: 50%;
+	max-width: 50%;
+}
+
+body.rtcl-account:not(.page-template-rtcl-canvas_template) .rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--add-listing a {
+ color: #838383;
+}
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--logout,
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--add-listing {
+	background-color: transparent;
+}
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--logout a,
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--add-listing a {
+	color: #838383;
+}
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--logout a:hover {
+	color: $colorWhite;
+}
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--add-listing a:before,
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--logout a:before,
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link a:before,
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link a:before {
+	background-color: #838383 !important;
+}
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--logout a:hover:before,
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.is-active a:before,
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link:hover a:before {
+	background-color: $colorWhite !important;
+}
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link a:after {
+	display: none;
+}
+
+.rtcl-MyAccount-wrap .rtcl-MyAccount-navigation .rtcl-unread-badge {
+	padding: 3px 5px;
+}
+
+body.rtcl-account:not(.page-template-rtcl-canvas_template) .rtcl-MyAccount-wrap .rtcl-MyAccount-navigation ul li.rtcl-MyAccount-navigation-link.rtcl-MyAccount-navigation-link--add-listing {
+	a {
+		color: $colorWhite;
+		transition: all .3s linear;
+		&:before {
+			background-color: $colorWhite !important;
+		}
+		&:hover {
+			background-color: #DB000E !important;
+		}
+	}
+}

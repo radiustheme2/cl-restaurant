@@ -1,0 +1,97 @@
+/*=======================================================================
+= Classified Listign Plugin Override
+=========================================================================*/
+.rtcl {
+    .rtcl-listing-badge-wrap {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        span.badge {
+            height: 30px;
+            display: flex;
+            padding: 0 10px;
+            line-height: 1.1;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+    }
+    .rtcl-listable {
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+    .rtcl-grid-view {
+        grid-row-gap: 24px;
+        grid-column-gap: 24px;
+        .listing-item {
+            border: none;
+            border-radius: 16px;
+            &.is-featured,
+            &.as-top {
+                border: none;
+            }
+        }
+    }
+    .btn-primary {
+        color: #fff;
+        border-color: $colorPrimary;
+        background-color: $colorPrimary;
+        &focus, &:hover {
+            background-color: $colorHPrimary;
+            border-color: $colorHPrimary;
+        }
+    }
+    a:hover {
+        text-decoration: none;
+    }
+}
+.rtcl .btn-primary:not(:disabled):not(.disabled).active:focus, 
+.rtcl .btn-primary:not(:disabled):not(.disabled):active:focus, 
+.show>.rtcl .btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+.listing-actions ul li a span.favourite-label {
+    display: none;
+}
+
+.rtcl-slider-nav {
+    max-height: 150px;
+    .rtcl-slider-thumb-item {
+        img {
+            width: 100%;
+            height: 150px;
+            border-radius: 8px;
+        }
+    }
+    .swiper-rtl .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after,
+    .swiper-button-prev:after, 
+    .swiper-button-next:after {
+        font-size: 32px;
+    }
+}
+
+.rtcl-slider-nav .rtcl-slider-thumb-item.rtcl-slider-video-thumb:before {
+    background-size: 20%;
+}
+
+.rtcl-price-meta,
+.rtcl-price {
+    font-size: 18px;
+    color: $colorHeading;
+}
+.rtcl-price-meta {
+    margin-top: 0;
+}
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+	z-index: 0;
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next,
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    background-image: none;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    color: $colorPrimary;
+}
