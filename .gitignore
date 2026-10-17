@@ -77,8 +77,10 @@ dwsync.xml
 package-lock.json
 composer.lock
 yarn.lock
+bun.lock
 _ext_dev
 dist
+build
 .idea
 assets/css
 assets/js

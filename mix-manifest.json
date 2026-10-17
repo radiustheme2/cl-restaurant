@@ -1,7 +1,12 @@
 {
+    "/mix.js.map": "/mix.js.map",
     "/build/temp/main.css": "/build/temp/main.css",
+    "/build/temp/main.css.map": "/build/temp/main.css.map",
     "/build/temp/rtl.css": "/build/temp/rtl.css",
+    "/build/temp/rtl.css.map": "/build/temp/rtl.css.map",
     "/assets/css/admin.css": "/assets/css/admin.css",
+    "/assets/css/admin.css.map": "/assets/css/admin.css.map",
     "/assets/css/main.css": "/assets/css/main.css",
+    "/assets/css/main.css.map": "/assets/css/main.css.map",
     "/assets/css-rtl/clrestaurant-rtl.css": "/assets/css-rtl/clrestaurant-rtl.css"
 }
