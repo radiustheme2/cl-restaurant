@@ -32,7 +32,7 @@ if ( $listing->can_show_user() ) {
 <div class="item-img <?php echo esc_attr( $userShow ); ?>">
     <?php if ( Functions::is_enable_business_hours() && ! empty( BusinessHoursController::get_business_hours( $listing->get_id() ) ) ){ ?>
     <div class="open-close-location-status">
-        <?php echo wp_kses_post( Listing_Functions::business_open_close_status( $listing, true ) ); ?>
+        <?php Listing_Functions::business_open_close_status( $listing, true ); ?>
     </div>
     <?php } ?>
     <ul class="meta-tags ul-ol">

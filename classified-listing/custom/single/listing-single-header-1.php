@@ -84,7 +84,7 @@ $abuse = Functions::get_option_item( 'rtcl_single_listing_settings', 'has_report
 
                             <?php if ( Functions::is_enable_business_hours() && ! empty( BusinessHoursController::get_business_hours( $listing->get_id() ) ) ){ ?>
                                 <li class="meta-status">
-                                    <?php echo wp_kses_post( Listing_Functions::business_open_close_status( $listing, true ) ); ?>
+                                    <?php Listing_Functions::business_open_close_status( $listing, true ); ?>
                                 </li>
                             <?php } ?>
                     </ul>

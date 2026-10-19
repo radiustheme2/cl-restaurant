@@ -137,7 +137,7 @@ while ( $the_loops->have_posts() ) :
 					<?php if ( $instance['rtcl_show_onoff'] ) { ?>
 					<div class="open-close-location-status">
 						<?php if ( Functions::is_enable_business_hours() && ! empty( BusinessHoursController::get_business_hours( $listing->get_id() ) ) ){
-							    echo wp_kses_post( Listing_Functions::business_open_close_status( $listing, true ) );
+							    Listing_Functions::business_open_close_status( $listing, true );
 							}
 						?>
 					</div>
