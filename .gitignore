@@ -82,9 +82,6 @@ _ext_dev
 dist
 build
 .idea
-assets/css
-assets/js
-assets/modules
 tmp
 _ext_**
 .fleet
