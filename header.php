@@ -45,12 +45,14 @@ use \Rtcl\Helpers\Functions;
             }
         ?>
         
+        <?php if ( Options::$header_area == '1' || Options::$header_area === "on" ) : ?>
         <header id="masthead" class="site-header">
             <div id="sticky-placeholder"></div>
             <div id="header-<?php echo esc_attr( $header_style ); ?>" class="header-area">
                 <?php get_template_part('template-parts/header/header', $header_style ); ?>
             </div>
         </header>
+        <?php endif; ?>
         
         <?php get_template_part('template-parts/header/mobile', 'menu'); ?>
         

@@ -18,19 +18,21 @@ $footer_style = Options::$footer_style ? Options::$footer_style : 1;
 
 ?>
 
-<?php 
-    if ( Options::$has_newsletter == '1' || Options::$has_newsletter === "on" ) {
-        get_template_part( 'template-parts/footer/newsletter'); 
-    }
-    get_template_part( 'template-parts/footer/footer', $footer_style ); 
+<?php
+    if ( Options::$footer_area == '1' || Options::$footer_area === "on" ) :
+        if ( Options::$has_newsletter == '1' || Options::$has_newsletter === "on" ) {
+            get_template_part( 'template-parts/footer/newsletter');
+        }
+        get_template_part( 'template-parts/footer/footer', $footer_style );
 
-    if ( class_exists( 'RtclPro' ) && is_singular('rtcl_listing') ) {
-        get_template_part( 'template-parts/footer/photoswipe'); 
-    }
-    if ( class_exists( 'Rtcl' ) && class_exists( 'RtclPro' ) ) {
-        if (Functions::is_enable_favourite()){ 
-		}
-	}
+        if ( class_exists( 'RtclPro' ) && is_singular('rtcl_listing') ) {
+            get_template_part( 'template-parts/footer/photoswipe');
+        }
+        if ( class_exists( 'Rtcl' ) && class_exists( 'RtclPro' ) ) {
+            if (Functions::is_enable_favourite()){
+		    }
+	    }
+    endif;
 ?>
 
 <?php wp_footer(); ?>

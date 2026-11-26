@@ -64,7 +64,7 @@ class TGM_Config {
 				'slug'         => 'cl-restaurant-core',
 				'source'       => 'cl-restaurant-core.zip',
 				'required'     =>  true,
-				'version'      => '2.2.1'
+				'version'      => '2.2.2'
 			),
 			array(
 				'name'         => 'RT Framework',
@@ -78,21 +78,21 @@ class TGM_Config {
 				'slug'         => 'classified-listing-pro',
 				'source'       => 'classified-listing-pro.zip',
 				'required'     =>  true,
-				'version'      => '4.3.0'
+				'version'      => '4.4.1'
 			),
 			array(
 				'name'         => 'Classified Listing Store',
 				'slug'         => 'classified-listing-store',
 				'source'       => 'classified-listing-store.zip',
 				'required'     =>  false,
-				'version'      => '3.2.3'
+				'version'      => '3.2.4'
 			),
 			array(
 				'name'         => 'Review Schema Pro',
 				'slug'         => 'review-schema-pro',
 				'source'       => 'review-schema-pro.zip',
 				'required'     =>  false,
-				'version'      => '2.1.2'
+				'version'      => '2.1.3'
 			),
 		);
 
