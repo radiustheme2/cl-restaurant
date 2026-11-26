@@ -356,7 +356,7 @@ jQuery( document ).ready(function($) {
 	// Gallery Control
 
 	$(function(){
-		var begin_attachment_string = $("#images-input").val();
+		var begin_attachment_string = $("#images-input").val() || "";
 		var begin_attachment_array = begin_attachment_string.split(",");
 		for(var i = 0; i < begin_attachment_array.length; i++){
 			if(begin_attachment_array[i] != ""){
